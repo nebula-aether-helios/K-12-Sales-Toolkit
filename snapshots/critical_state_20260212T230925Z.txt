@@ -1,0 +1,47 @@
+Critical state snapshot generated: 20260212T230925Z
+DB URL: sqlite:///enrichment.db
+
+Prospect count: 62
+Email candidate count: 796
+
+Sample prospects (first 10):
+ID=21 src_row=1 domain=None dns_mx=False emails=6
+ID=22 src_row=3 domain=None dns_mx=False emails=6
+ID=23 src_row=4 domain=None dns_mx=False emails=6
+ID=24 src_row=2 domain=None dns_mx=False emails=12
+ID=25 src_row=6 domain=None dns_mx=False emails=6
+ID=26 src_row=7 domain=None dns_mx=False emails=6
+ID=27 src_row=5 domain=None dns_mx=False emails=6
+ID=28 src_row=9 domain=None dns_mx=False emails=9
+ID=29 src_row=8 domain=None dns_mx=False emails=6
+ID=30 src_row=10 domain=None dns_mx=False emails=6
+
+Sample email candidates (first 20):
+ID=70 prospect_id=None email=d.iron@D.com status=probable score=0.6
+ID=71 prospect_id=None email=d.i@D.com status=probable score=0.6
+ID=72 prospect_id=None email=info@D.com status=probable score=0.6
+ID=73 prospect_id=None email=llamas.angelo@D.com status=probable score=0.6
+ID=74 prospect_id=None email=llamas.a@D.com status=probable score=0.6
+ID=75 prospect_id=None email=l.angelo@D.com status=probable score=0.6
+ID=76 prospect_id=None email=dna.floors@DNA.com status=probable score=0.6
+ID=77 prospect_id=None email=dna.f@DNA.com status=probable score=0.6
+ID=78 prospect_id=None email=d.floors@DNA.com status=probable score=0.6
+ID=79 prospect_id=None email=pozdnyakov.alex@DNA.com status=probable score=0.6
+ID=80 prospect_id=None email=pozdnyakov.a@DNA.com status=probable score=0.6
+ID=81 prospect_id=None email=p.alex@DNA.com status=probable score=0.6
+ID=82 prospect_id=None email=info@ESLE status=probable score=0.6
+ID=83 prospect_id=None email=office@ESLE status=probable score=0.6
+ID=84 prospect_id=None email=admin@ESLE status=probable score=0.6
+ID=85 prospect_id=None email=energy.inc@ESLE status=probable score=0.6
+ID=86 prospect_id=None email=energy.i@ESLE status=probable score=0.6
+ID=87 prospect_id=None email=e.inc@ESLE status=probable score=0.6
+ID=88 prospect_id=None email=yevchenko.anatolyevich@ESLE status=probable score=0.6
+ID=89 prospect_id=None email=yevchenko.a@ESLE status=probable score=0.6
+
+Recent files:
+outputs/sample_10_email_candidates.csv - size=138332 modified=2026-02-12T22:46:37.126688Z
+outputs/sacramento_contractors_cslb_sac_osint.csv - size=9938515 modified=2026-02-12T22:07:12.645564Z
+enrichment/email_utils.py - size=11331 modified=2026-02-12T22:38:45.005318Z
+workers/quick_run.py - size=7810 modified=2026-02-12T22:58:08.945869Z
+tools/iterative_validate.py - size=4338 modified=2026-02-12T22:54:25.674705Z
+tools/purge_non_validated.py - size=849 modified=2026-02-12T22:58:08.945869Z

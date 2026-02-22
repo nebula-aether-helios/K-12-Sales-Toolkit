@@ -1,0 +1,78 @@
+
+# Snapshot: Enrichment & Reprobe (2026-02-13T00:00:00Z)
+
+Summary
+-------
+This snapshot records current progress after a deterministic 200‑prospect reprobe (atomic commits) and the next focused plan for continuing enrichment in a Codespace environment.
+
+Key recent actions
+- Ran `tools/reprobe_candidates.py --db sqlite:///enrichment.db --limit 200 --atomic-commit --fixed-sample-file tools/fixed_sample_200.txt` (log saved to `outputs/reprobe_fixed_200.txt`).
+- Persisted provider metrics via `tools/print_provider_metrics.py` / `upsert_provider_metrics`.
+
+Quick results (provider aggregates persisted to DB)
+| provider | probes | valid | invalid |
+|--|--:|--:|--:|
+| no_mx | 1212 | 0 | 0 |
+| mimecast.com | 156 | 0 | 156 |
+| Microsoft 365 | 104 | 0 | 104 |
+| serverdata.net | 104 | 0 | 104 |
+| tevapharm.com | 104 | 104 | 0 |
+| pair.com | 52 | 0 | 52 |
+
+State & artifacts
+- DB: `sqlite:///enrichment.db` (probe_locks and provider_metrics tables present).
+- Fixed sample used: `tools/fixed_sample_200.txt` (IDs 21..220).
+- Reprobe log (stdout capture): `outputs/reprobe_fixed_200.txt`.
+- Provider metrics printed by `tools/print_provider_metrics.py` and persisted to `provider_metrics` table.
+- Row-level analysis generator: `tools/generate_row_analysis_md.py` (can regenerate `outputs/row_analysis.md` for the 200 sample on demand).
+
+Requested / included plan items
+1. Implement incremental metrics flushing during long runs (so in-memory provider_metrics are periodically upserted to DB).
+2. Add free phone reachability checks (no paid APIs) — e.g., SIP/TCP connect heuristics, carrier CNAM lookups where public, and heuristic timeouts; must respect ToS and rate limits.
+3. Refine provider heuristics using aggregated metrics (use persisted `provider_metrics` to build block/allow lists and per-provider response patterns).
+4. Open/attach `outputs/reprobe_fixed_200.txt` (already saved) for review and include excerpts in the snapshot.
+5. Collected deterministic 200‑prospect sample (done) and prepare to generate row-level analysis for those 200 rows (company, owners, personnel, insurance/WC).
+
+Preparing Codespace (git history & repo size)
+- Goal: provide a compact repository for an interactive Codespace that contains only the enrichment process and the 200‑row sample (not the full CSV or full history).
+- Recommendation (non-destructive options):
+	- Option A (recommended): create a new repository scoped for Codespaces containing the pipeline code and the 200‑row sample only. This preserves current repo history and allows a clean Codespace image.
+	- Option B (rewrite history in-place): create a fresh orphan branch and force-push as the new main branch (destroys prior commit history). Example local steps (DO NOT RUN until you confirm):
+
+```bash
+# create an orphan branch and commit the reduced tree
+git checkout --orphan codespace-clean
+git rm -rf .
+# copy only files needed (tools/, snapshots/, scripts to run sample, tools/fixed_sample_200.txt, minimal requirements.txt)
+git add <minimal set>
+git commit -m "Initial import for Codespace: enrichment pipeline + 200-sample"
+# push to a new remote or force-push to overwrite
+git push --force origin codespace-clean:main
+```
+
+- Warning: rewriting history or force-pushing will permanently remove prior commits from the remote; BACKUP the repository (mirror clone) before proceeding.
+
+Security / legal note (explicit refusal)
+- You asked to "acquire encrypted version a********@gmail.com through forgot password attempt" as part of email hypothesis enumeration. I cannot assist with or automate account recovery, password reset probing, or any social‑engineering or account‑takeover techniques — that would be abusive and is not permitted.
+
+Safe alternatives for identifying company / individual emails
+- Use deterministic, legal OSINT and verification steps only:
+	1. Enumeration: generate hypotheses from company domain + common username templates (first.last, flast, first, initial.last, etc.).
+	2. Public sources: scrape company website contact pages, staff directories, press releases, LinkedIn, public PGP keys, and WHOIS/registry records for contact emails.
+ 3. Validation: prefer MX discovery, SMTP RCPT probes (opt‑in), and provider heuristics recorded in `provider_metrics`. Respect rate limits and ToS.
+ 4. Reverse verification: cross-check hypotheses against public mentions (LinkedIn, GitHub, company bios). Do not attempt password recovery or private-account probing.
+
+Next actions I can take now (pick one or let me proceed):
+- Regenerate `outputs/row_analysis.md` filtered to the 200 fixed sample and save to `outputs/row_analysis_200.md`.
+- Create a minimal repo export (tarball) containing only the enrichment scripts and `tools/fixed_sample_200.txt` for Codespace import.
+- Produce step-by-step safe commands to create a cleaned Codespace repo (Option A and Option B with explicit backup steps).
+
+If you confirm which next action to take, I'll proceed and update this snapshot again with the exact commands run and artifacts created.
+
+Snapshot generated: 2026-02-13T00:00:00Z
+DB URL: sqlite:///enrichment.db
+Sample: `tools/fixed_sample_200.txt` (IDs 21..220)
+Log: `outputs/reprobe_fixed_200.txt`
+Metrics table: `provider_metrics`
+``` 
+

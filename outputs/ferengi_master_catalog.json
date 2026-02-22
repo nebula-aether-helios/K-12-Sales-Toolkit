@@ -1,0 +1,181 @@
+{
+  "catalog_metadata": {
+    "catalog_id": "FMC-20260210-235906",
+    "created_by": "Ferengi Commerce Authority",
+    "creation_date": "2026-02-10T23:59:06.480915",
+    "version": "2.0.0",
+    "rules_of_acquisition": [
+      "Rule #10: Greed is eternal - Catalog every data source",
+      "Rule #125: You can't make a deal if you can't make contact - Complete documentation",
+      "Rule #34: War is good for business - Superior intelligence through data"
+    ]
+  },
+  "api_categories": {
+    "government_data": {
+      "description": "Official government data sources",
+      "priority": "CRITICAL",
+      "apis": [
+        "osha_dol",
+        "arcgis_sacramento",
+        "cslb_licensing",
+        "sos_business_search"
+      ]
+    },
+    "business_intelligence": {
+      "description": "Commercial business data and intelligence",
+      "priority": "HIGH",
+      "apis": [
+        "google_places",
+        "yelp_fusion",
+        "bbb_api",
+        "duns_bradstreet"
+      ]
+    },
+    "web_intelligence": {
+      "description": "Web scraping and OSINT sources",
+      "priority": "HIGH",
+      "apis": [
+        "craigslist_scraper",
+        "wayback_machine",
+        "duckduckgo_search",
+        "social_media_osint"
+      ]
+    },
+    "infrastructure_services": {
+      "description": "Supporting infrastructure and messaging",
+      "priority": "MEDIUM",
+      "apis": [
+        "rabbitmq",
+        "mongodb",
+        "redis_cache",
+        "elasticsearch"
+      ]
+    },
+    "validation_services": {
+      "description": "Data validation and verification",
+      "priority": "MEDIUM",
+      "apis": [
+        "dns_validation",
+        "phone_validation",
+        "email_verification",
+        "address_standardization"
+      ]
+    }
+  },
+  "endpoint_registry": {
+    "google_places_api": {
+      "category": "business_intelligence",
+      "status": "PRODUCTION_READY",
+      "authentication": "API_KEY",
+      "base_url": "https://places.googleapis.com",
+      "endpoints": {
+        "text_search": {
+          "url": "/v1/places:searchText",
+          "method": "POST",
+          "parameters": {
+            "textQuery": {},
+            "fields": {},
+            "locationBias": {}
+          },
+          "response_fields": [
+            "id",
+            "displayName",
+            "formattedAddress",
+            "rating",
+            "userRatingCount",
+            "websiteUri",
+            "nationalPhoneNumber"
+          ],
+          "rate_limit": "100 requests/minute"
+        },
+        "place_details": {
+          "url": "/v1/places/{place_id}",
+          "method": "GET",
+          "parameters": {
+            "place_id": {},
+            "fields": {}
+          },
+          "response_fields": [
+            "businessStatus",
+            "priceLevel",
+            "reviews",
+            "photos",
+            "openingHours"
+          ],
+          "rate_limit": "100 requests/minute"
+        },
+        "legacy_text_search": {
+          "url": "https://maps.googleapis.com/maps/api/place/textsearch/json",
+          "method": "GET"
+        }
+      }
+    },
+    "osha_dol_api": {
+      "category": "government_data",
+      "status": "PRODUCTION_READY",
+      "authentication": "API_KEY",
+      "base_url": "https://api.dol.gov",
+      "endpoints": {
+        "inspections": {
+          "url": "https://enforcedata.dol.gov/api/osha_inspection",
+          "method": "GET"
+        }
+      }
+    },
+    "arcgis_sacramento": {
+      "category": "government_data",
+      "status": "PRODUCTION_READY",
+      "authentication": "BASIC_AUTH",
+      "base_url": "https://services.arcgis.com/S8zZg9pg23JUEexQ/arcgis/rest/services"
+    },
+    "wayback_machine_cdx": {
+      "category": "web_intelligence",
+      "status": "PRODUCTION_READY",
+      "authentication": "NONE",
+      "base_url": "https://web.archive.org"
+    },
+    "craigslist_scraper": {
+      "category": "web_intelligence",
+      "status": "PRODUCTION_READY",
+      "authentication": "NONE",
+      "base_url": "https://sacramento.craigslist.org"
+    }
+  },
+  "authentication_methods": {
+    "api_key": {
+      "description": "API key in header or query"
+    },
+    "basic_auth": {
+      "description": "Basic auth"
+    },
+    "oauth2": {
+      "description": "OAuth2 token"
+    },
+    "none": {
+      "description": "No auth"
+    }
+  },
+  "data_acquisition_protocols": {
+    "batch_processing": {
+      "batch_sizes": {
+        "google_places": 50,
+        "osha_dol": 100,
+        "arcgis_sacramento": 200
+      }
+    },
+    "rate_limiting": {
+      "strategy": "exponential_backoff+jitter"
+    },
+    "error_recovery": {
+      "retry_logic": {
+        "max_retries": 3,
+        "backoff_multiplier": 2
+      }
+    }
+  },
+  "quality_standards": {
+    "completion_targets": {
+      "field_completion_rate": "99.9%"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+Contune All set — I implemented structured logging, added a DB probe lock flag, created a fallback starter, migrated the DB, and verified everything by re-running the reprobe.
+
+What I changed and ran
+
+DB
+Added probe_in_progress boolean to EnrichedProspect (models.py) and updated the SQLite DB schema via add_probe_flag.py.
+
+Logging & locking
+`reprobe_candidates.py`: added JSON-line structured logging to `outputs/logs/reprobe.log`, checks for any global `probe_in_progress` and aborts if another run is active, sets `probe_in_progress=True` per-prospect before probing, and clears it in a finally block. Keeps `--atomic-commit`.
+
+SMTP heuristics (already done earlier)
+`enrichment/email_utils.py`: retry/backoff and provider-based handling for 4xx/5xx.
+`connectors/dns_helpers.py`: `is_valid_hostname()` added.
+
+Fallback tool
+`tools/fallback_no_mx.py`: starter script that scrapes site root for email addresses and writes `outputs/fallback_no_mx.json`.
+
+Migration
+`tools/add_probe_flag.py` applied ALTER TABLE to add the new column.
+
+Verification
+Ran reprobe with locking and atomic commits:
+
+Command:
+
+$env:PYTHONPATH="."; python tools/reprobe_candidates.py --db sqlite:///enrichment.db --limit 10 --atomic-commit | tee outputs/reprobe_atomic_validated_13.txt
+
+Output files: `outputs/reprobe_atomic_validated_13.txt`, `outputs/reprobe_atomic_10.txt`, `outputs/diagnose_10.txt`
+
+Structured log: `outputs/logs/reprobe.log`
+
+Results: 10 prospects processed, 69 candidates inspected, 6 SMTP-validated candidates (prospect id=29), others invalid/no-mx as before.
+
+Files added/edited
+
+Edited: `db/models.py`, `connectors/dns_helpers.py`, `enrichment/email_utils.py`, `tools/reprobe_candidates.py`, `snapshots/latest_snapshot.txt`
+Added: `tools/fallback_no_mx.py`, `tools/add_probe_flag.py`
+
+Logs/outputs: `outputs/logs/reprobe.log`, `outputs/reprobe_atomic_validated_13.txt`, `outputs/reprobe_atomic_10.txt`, `outputs/diagnose_10.txt`, `outputs/fallback_no_mx.json` (created when run)
+
+Next recommended steps (pick one)
+
+1) Implement structured logging for provider-specific metrics and add a DB `probe_in_progress` index or better locking (e.g., a small `probe_locks` table) — useful at scale.
+2) Expand `tools/fallback_no_mx.py` to actively scrape multiple pages, use the Wayback/Connectors for contact/WHOIS, and write candidate rows back to the DB.
+3) Tune the SMTP heuristics further (collect more samples and extend `mx_provider_from_hostname`).
+
+Which would you like next?
+
+GPT-5 mini • 0x (See attachments above for file contents; re-reading the file not needed.)

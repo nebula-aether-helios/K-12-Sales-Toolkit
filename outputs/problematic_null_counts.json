@@ -1,0 +1,12 @@
+{
+  "db_path": "outputs\\ferengi_enrichment.db",
+  "generated_at": "C:\\Users\\aether\\Documents\\GitHub\\azuredev-2005",
+  "gp_rating_nulls_count": 3259,
+  "gp_rating_nulls_csv": "outputs\\gp_rating_nulls.csv",
+  "risk_permit_nulls_count": 9749,
+  "risk_permit_nulls_csv": "outputs\\risk_permit_nulls.csv",
+  "combined_nulls_count": 9749,
+  "combined_nulls_csv": "outputs\\combined_nulls.csv",
+  "error_rows_count": 0,
+  "error_rows_csv": "outputs\\error_rows.csv"
+}

@@ -1,0 +1,7349 @@
+{
+  "generated_at": "2026-02-12T00:54:10.896030",
+  "db_path": "outputs/ferengi_enrichment.db",
+  "env": {
+    "RECORD_HTTP": null,
+    "FERENGI_DB": null,
+    "GOOGLE_PLACES_API_KEY": null,
+    "DCA_API": null,
+    "US_DEPT_OF_LABOR_API": null
+  },
+  "db": {
+    "schema": [
+      {
+        "cid": 0,
+        "name": "_id",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "mongo_tag",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "data_source",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "market",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "record_version",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "record_created_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "record_updated_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "license_number",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "business_name",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "dba_name",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "business_type",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "classifications",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "contact_name",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "contact_type",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "contact_title",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "phone_business",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "address_street",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "address_city",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "address_state",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "address_county",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "address_zip",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "status_primary",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "status_secondary",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "license_issue_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 24,
+        "name": "license_expiration_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 25,
+        "name": "license_reissue_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 26,
+        "name": "days_to_expiry",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 27,
+        "name": "wc_coverage_type",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 28,
+        "name": "wc_insurance_company",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 29,
+        "name": "wc_policy_number",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 30,
+        "name": "wc_effective_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 31,
+        "name": "wc_expiration_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 32,
+        "name": "cb_surety_company",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 33,
+        "name": "cb_bond_number",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 34,
+        "name": "cb_amount",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 35,
+        "name": "db_surety_company",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 36,
+        "name": "db_bond_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 37,
+        "name": "db_case_number",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 38,
+        "name": "risk_score",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 39,
+        "name": "risk_tier",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 40,
+        "name": "seg_home_improvement",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 41,
+        "name": "seg_general_contractor",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 42,
+        "name": "seg_wc_exposure",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 43,
+        "name": "seg_license_expiring_90d",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 44,
+        "name": "seg_has_suspension",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 45,
+        "name": "seg_has_la_presence",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 46,
+        "name": "law_ab1327_email_cancel",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 47,
+        "name": "law_sb517_subcontractor",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 48,
+        "name": "law_sb291_wc_penalties",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 49,
+        "name": "law_any_2026_impact",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 50,
+        "name": "enrich_status",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 51,
+        "name": "enrich_google_places_done",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 52,
+        "name": "enrich_osha_done",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 53,
+        "name": "enrich_permits_done",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 54,
+        "name": "enrich_craigslist_done",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 55,
+        "name": "enrich_osint_done",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 56,
+        "name": "enrich_court_records_done",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 57,
+        "name": "gp_place_id",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 58,
+        "name": "gp_website",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 59,
+        "name": "gp_rating",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 60,
+        "name": "gp_review_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 61,
+        "name": "gp_phone_verified",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 62,
+        "name": "gp_hours",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 63,
+        "name": "gp_lat",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 64,
+        "name": "gp_lng",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 65,
+        "name": "gp_enriched_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 66,
+        "name": "osha_inspection_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 67,
+        "name": "osha_violation_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 68,
+        "name": "osha_penalty_total",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 69,
+        "name": "osha_last_inspection_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 70,
+        "name": "osha_open_cases",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 71,
+        "name": "osha_serious_violations",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 72,
+        "name": "osha_enriched_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 73,
+        "name": "permit_active_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 74,
+        "name": "permit_total_value",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 75,
+        "name": "permit_last_issued_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 76,
+        "name": "permit_types",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 77,
+        "name": "permit_enriched_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 78,
+        "name": "cl_ad_found",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 79,
+        "name": "cl_ad_url",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 80,
+        "name": "cl_license_displayed",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 81,
+        "name": "cl_down_payment_violation",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 82,
+        "name": "cl_disaster_zone_ad",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 83,
+        "name": "cl_enriched_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 84,
+        "name": "osint_email_discovered",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 85,
+        "name": "osint_email_verified",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 86,
+        "name": "osint_cell_phone",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 87,
+        "name": "osint_linkedin_url",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 88,
+        "name": "osint_facebook_url",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 89,
+        "name": "osint_yelp_url",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 90,
+        "name": "osint_bbb_rating",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 91,
+        "name": "osint_enriched_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 92,
+        "name": "court_case_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 93,
+        "name": "court_lien_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 94,
+        "name": "court_judgment_total",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 95,
+        "name": "court_bankruptcy",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 96,
+        "name": "court_enriched_at",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 97,
+        "name": "trigger_fear_disaster_zone",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 98,
+        "name": "trigger_fear_ab1327_deadline",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 99,
+        "name": "trigger_fear_sb291_penalty",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 100,
+        "name": "trigger_fear_sb779_fine",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 101,
+        "name": "trigger_fear_nascla_sweep",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 102,
+        "name": "trigger_fear_ab1002_wage",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 103,
+        "name": "trigger_fear_osha_investigation",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 104,
+        "name": "trigger_fear_craigslist_violation",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 105,
+        "name": "trigger_envy_competitor_permits",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 106,
+        "name": "trigger_envy_govt_contracts",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 107,
+        "name": "trigger_envy_market_position",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 108,
+        "name": "trigger_envy_sb517_compliance",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 109,
+        "name": "trigger_envy_la_expansion",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 110,
+        "name": "report_license_suspension_alert",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 111,
+        "name": "report_2026_compliance_deadline",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 112,
+        "name": "report_wc_exposure_audit",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 113,
+        "name": "report_osha_risk",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 114,
+        "name": "report_craigslist_competitor",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 115,
+        "name": "report_competitor_permit_tracker",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 116,
+        "name": "report_govt_contract_intel",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 117,
+        "name": "report_subcontractor_verification",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 118,
+        "name": "report_market_position",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 119,
+        "name": "report_la_expansion",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 120,
+        "name": "crm_lead_status",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 121,
+        "name": "crm_last_contact_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 122,
+        "name": "crm_email_sent_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 123,
+        "name": "crm_email_opened",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 124,
+        "name": "crm_report_purchased",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 125,
+        "name": "crm_report_purchased_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 126,
+        "name": "crm_total_revenue",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 127,
+        "name": "crm_chatbot_session_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 128,
+        "name": "crm_conversion_funnel_stage",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 129,
+        "name": "error_message",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 130,
+        "name": "cl_owner_name",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 131,
+        "name": "cl_owner_phone",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 132,
+        "name": "cl_owner_email",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 133,
+        "name": "cl_safety_claim",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 134,
+        "name": "cl_price_claim",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 135,
+        "name": "cl_multiple_ads",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 136,
+        "name": "cl_region",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 137,
+        "name": "cl_category",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 138,
+        "name": "cl_posted_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 139,
+        "name": "cl_updated_date",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 140,
+        "name": "cl_images_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 141,
+        "name": "cl_contact_method",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 142,
+        "name": "cl_payment_terms",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 143,
+        "name": "cl_listing_id",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 144,
+        "name": "cl_phone_in_title",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 145,
+        "name": "cl_text_snippet",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 146,
+        "name": "cl_raw_json",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 147,
+        "name": "cl_wayback_count",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 148,
+        "name": "cl_wayback_matches",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 149,
+        "name": "cl_historical_ads",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 150,
+        "name": "cl_scam_flags",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 151,
+        "name": "cl_competitor_licenses",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 152,
+        "name": "cl_address_in_ad",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 153,
+        "name": "cl_city_in_ad",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 154,
+        "name": "cl_state_in_ad",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 155,
+        "name": "cl_zip_in_ad",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 156,
+        "name": "cl_price_low",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 157,
+        "name": "cl_price_high",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 158,
+        "name": "cl_fake_images_detected",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "counts": {
+      "total": 9749,
+      "completed": 7039,
+      "errors": 465
+    },
+    "error_summary": [
+      {
+        "message": "'>' not supported between instances of 'NoneType' and 'float'",
+        "count": 465
+      }
+    ],
+    "sample_count": 50,
+    "sample_csv": "outputs\\full_database_sample_50.csv",
+    "sample_json": "outputs\\full_database_sample_50.json"
+  },
+  "snapshots": [
+    {
+      "iteration": 1,
+      "timestamp": "2026-02-11T18:57:08.148429",
+      "counts": {
+        "total": 9749,
+        "completed": 2555,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_001.json"
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2026-02-11T18:57:20.283270",
+      "counts": {
+        "total": 9749,
+        "completed": 2562,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_002.json"
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2026-02-11T18:57:32.935804",
+      "counts": {
+        "total": 9749,
+        "completed": 2570,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_003.json"
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2026-02-11T18:57:44.744222",
+      "counts": {
+        "total": 9749,
+        "completed": 2579,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_004.json"
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2026-02-11T18:57:56.798879",
+      "counts": {
+        "total": 9749,
+        "completed": 2584,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_005.json"
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2026-02-11T18:58:10.519185",
+      "counts": {
+        "total": 9749,
+        "completed": 2591,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_006.json"
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2026-02-11T18:58:22.557389",
+      "counts": {
+        "total": 9749,
+        "completed": 2598,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_007.json"
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2026-02-11T18:58:34.012031",
+      "counts": {
+        "total": 9749,
+        "completed": 2607,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_008.json"
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2026-02-11T18:58:46.318802",
+      "counts": {
+        "total": 9749,
+        "completed": 2614,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_009.json"
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2026-02-11T18:58:59.909370",
+      "counts": {
+        "total": 9749,
+        "completed": 2624,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_010.json"
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2026-02-11T18:59:12.129202",
+      "counts": {
+        "total": 9749,
+        "completed": 2631,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_011.json"
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2026-02-11T18:59:25.501265",
+      "counts": {
+        "total": 9749,
+        "completed": 2638,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_012.json"
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2026-02-11T18:59:37.314997",
+      "counts": {
+        "total": 9749,
+        "completed": 2646,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_013.json"
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2026-02-11T18:59:49.035465",
+      "counts": {
+        "total": 9749,
+        "completed": 2656,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_014.json"
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2026-02-11T19:00:00.936211",
+      "counts": {
+        "total": 9749,
+        "completed": 2666,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_015.json"
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2026-02-11T19:00:12.890448",
+      "counts": {
+        "total": 9749,
+        "completed": 2673,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_016.json"
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2026-02-11T19:00:24.336079",
+      "counts": {
+        "total": 9749,
+        "completed": 2682,
+        "errors": 569
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_017.json"
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2026-02-11T19:00:35.886624",
+      "counts": {
+        "total": 9749,
+        "completed": 2689,
+        "errors": 570
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_018.json"
+    },
+    {
+      "iteration": 19,
+      "timestamp": "2026-02-11T19:00:47.834874",
+      "counts": {
+        "total": 9749,
+        "completed": 2699,
+        "errors": 570
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_019.json"
+    },
+    {
+      "iteration": 20,
+      "timestamp": "2026-02-11T19:01:00.207923",
+      "counts": {
+        "total": 9749,
+        "completed": 2706,
+        "errors": 572
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_020.json"
+    },
+    {
+      "iteration": 21,
+      "timestamp": "2026-02-11T19:01:11.982574",
+      "counts": {
+        "total": 9749,
+        "completed": 2714,
+        "errors": 575
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_021.json"
+    },
+    {
+      "iteration": 22,
+      "timestamp": "2026-02-11T19:01:24.193659",
+      "counts": {
+        "total": 9749,
+        "completed": 2722,
+        "errors": 576
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_022.json"
+    },
+    {
+      "iteration": 23,
+      "timestamp": "2026-02-11T19:01:35.637210",
+      "counts": {
+        "total": 9749,
+        "completed": 2732,
+        "errors": 577
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_023.json"
+    },
+    {
+      "iteration": 24,
+      "timestamp": "2026-02-11T19:01:47.493239",
+      "counts": {
+        "total": 9749,
+        "completed": 2740,
+        "errors": 581
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_024.json"
+    },
+    {
+      "iteration": 25,
+      "timestamp": "2026-02-11T19:01:59.548878",
+      "counts": {
+        "total": 9749,
+        "completed": 2749,
+        "errors": 583
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_025.json"
+    },
+    {
+      "iteration": 26,
+      "timestamp": "2026-02-11T19:02:12.224487",
+      "counts": {
+        "total": 9749,
+        "completed": 2759,
+        "errors": 584
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_026.json"
+    },
+    {
+      "iteration": 27,
+      "timestamp": "2026-02-11T19:02:24.101740",
+      "counts": {
+        "total": 9749,
+        "completed": 2766,
+        "errors": 586
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_027.json"
+    },
+    {
+      "iteration": 28,
+      "timestamp": "2026-02-11T19:02:36.310462",
+      "counts": {
+        "total": 9749,
+        "completed": 2774,
+        "errors": 586
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_028.json"
+    },
+    {
+      "iteration": 29,
+      "timestamp": "2026-02-11T19:02:48.128877",
+      "counts": {
+        "total": 9749,
+        "completed": 2784,
+        "errors": 586
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_029.json"
+    },
+    {
+      "iteration": 30,
+      "timestamp": "2026-02-11T19:02:59.721339",
+      "counts": {
+        "total": 9749,
+        "completed": 2792,
+        "errors": 587
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_030.json"
+    },
+    {
+      "iteration": 31,
+      "timestamp": "2026-02-11T19:03:11.068143",
+      "counts": {
+        "total": 9749,
+        "completed": 2780,
+        "errors": 588
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_031.json"
+    },
+    {
+      "iteration": 32,
+      "timestamp": "2026-02-11T19:03:23.420813",
+      "counts": {
+        "total": 9749,
+        "completed": 2789,
+        "errors": 591
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_032.json"
+    },
+    {
+      "iteration": 33,
+      "timestamp": "2026-02-11T19:03:35.018160",
+      "counts": {
+        "total": 9749,
+        "completed": 2798,
+        "errors": 593
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_033.json"
+    },
+    {
+      "iteration": 34,
+      "timestamp": "2026-02-11T19:03:46.650082",
+      "counts": {
+        "total": 9749,
+        "completed": 2804,
+        "errors": 598
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_034.json"
+    },
+    {
+      "iteration": 35,
+      "timestamp": "2026-02-11T19:03:58.117888",
+      "counts": {
+        "total": 9749,
+        "completed": 2812,
+        "errors": 600
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_035.json"
+    },
+    {
+      "iteration": 36,
+      "timestamp": "2026-02-11T19:04:09.989686",
+      "counts": {
+        "total": 9749,
+        "completed": 2822,
+        "errors": 601
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_036.json"
+    },
+    {
+      "iteration": 37,
+      "timestamp": "2026-02-11T19:04:21.467964",
+      "counts": {
+        "total": 9749,
+        "completed": 2830,
+        "errors": 601
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_037.json"
+    },
+    {
+      "iteration": 38,
+      "timestamp": "2026-02-11T19:04:33.446262",
+      "counts": {
+        "total": 9749,
+        "completed": 2838,
+        "errors": 601
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_038.json"
+    },
+    {
+      "iteration": 39,
+      "timestamp": "2026-02-11T19:04:45.019113",
+      "counts": {
+        "total": 9749,
+        "completed": 2842,
+        "errors": 601
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_039.json"
+    },
+    {
+      "iteration": 40,
+      "timestamp": "2026-02-11T19:04:56.304126",
+      "counts": {
+        "total": 9749,
+        "completed": 2851,
+        "errors": 601
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_040.json"
+    },
+    {
+      "iteration": 41,
+      "timestamp": "2026-02-11T19:05:08.713021",
+      "counts": {
+        "total": 9749,
+        "completed": 2859,
+        "errors": 602
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_041.json"
+    },
+    {
+      "iteration": 42,
+      "timestamp": "2026-02-11T19:05:21.938488",
+      "counts": {
+        "total": 9749,
+        "completed": 2871,
+        "errors": 603
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_042.json"
+    },
+    {
+      "iteration": 43,
+      "timestamp": "2026-02-11T19:05:34.521012",
+      "counts": {
+        "total": 9749,
+        "completed": 2880,
+        "errors": 606
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_043.json"
+    },
+    {
+      "iteration": 44,
+      "timestamp": "2026-02-11T19:05:46.757581",
+      "counts": {
+        "total": 9749,
+        "completed": 2888,
+        "errors": 608
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_044.json"
+    },
+    {
+      "iteration": 45,
+      "timestamp": "2026-02-11T19:05:58.302056",
+      "counts": {
+        "total": 9749,
+        "completed": 2893,
+        "errors": 614
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_045.json"
+    },
+    {
+      "iteration": 46,
+      "timestamp": "2026-02-11T19:06:09.749272",
+      "counts": {
+        "total": 9749,
+        "completed": 2898,
+        "errors": 617
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_046.json"
+    },
+    {
+      "iteration": 47,
+      "timestamp": "2026-02-11T19:06:21.162868",
+      "counts": {
+        "total": 9749,
+        "completed": 2906,
+        "errors": 617
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_047.json"
+    },
+    {
+      "iteration": 48,
+      "timestamp": "2026-02-11T19:06:33.267732",
+      "counts": {
+        "total": 9749,
+        "completed": 2914,
+        "errors": 617
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_048.json"
+    },
+    {
+      "iteration": 49,
+      "timestamp": "2026-02-11T19:06:46.026318",
+      "counts": {
+        "total": 9749,
+        "completed": 2924,
+        "errors": 618
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_049.json"
+    },
+    {
+      "iteration": 50,
+      "timestamp": "2026-02-11T19:06:57.662795",
+      "counts": {
+        "total": 9749,
+        "completed": 2913,
+        "errors": 620
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_050.json"
+    },
+    {
+      "iteration": 51,
+      "timestamp": "2026-02-11T19:07:09.539447",
+      "counts": {
+        "total": 9749,
+        "completed": 2923,
+        "errors": 621
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_051.json"
+    },
+    {
+      "iteration": 52,
+      "timestamp": "2026-02-11T19:07:21.444319",
+      "counts": {
+        "total": 9749,
+        "completed": 2934,
+        "errors": 622
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_052.json"
+    },
+    {
+      "iteration": 53,
+      "timestamp": "2026-02-11T19:07:33.222722",
+      "counts": {
+        "total": 9749,
+        "completed": 2941,
+        "errors": 625
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_053.json"
+    },
+    {
+      "iteration": 54,
+      "timestamp": "2026-02-11T19:07:45.755178",
+      "counts": {
+        "total": 9749,
+        "completed": 2952,
+        "errors": 626
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_054.json"
+    },
+    {
+      "iteration": 55,
+      "timestamp": "2026-02-11T19:07:58.021441",
+      "counts": {
+        "total": 9749,
+        "completed": 2963,
+        "errors": 628
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_055.json"
+    },
+    {
+      "iteration": 56,
+      "timestamp": "2026-02-11T19:08:09.935498",
+      "counts": {
+        "total": 9749,
+        "completed": 2970,
+        "errors": 628
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_056.json"
+    },
+    {
+      "iteration": 57,
+      "timestamp": "2026-02-11T19:08:22.075715",
+      "counts": {
+        "total": 9749,
+        "completed": 2976,
+        "errors": 628
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_057.json"
+    },
+    {
+      "iteration": 58,
+      "timestamp": "2026-02-11T19:08:33.903833",
+      "counts": {
+        "total": 9749,
+        "completed": 2985,
+        "errors": 628
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_058.json"
+    },
+    {
+      "iteration": 59,
+      "timestamp": "2026-02-11T19:08:45.766606",
+      "counts": {
+        "total": 9749,
+        "completed": 2997,
+        "errors": 628
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_059.json"
+    },
+    {
+      "iteration": 60,
+      "timestamp": "2026-02-11T19:08:57.426925",
+      "counts": {
+        "total": 9749,
+        "completed": 3006,
+        "errors": 630
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_060.json"
+    },
+    {
+      "iteration": 61,
+      "timestamp": "2026-02-11T19:09:09.001548",
+      "counts": {
+        "total": 9749,
+        "completed": 3015,
+        "errors": 633
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_061.json"
+    },
+    {
+      "iteration": 62,
+      "timestamp": "2026-02-11T19:09:21.112804",
+      "counts": {
+        "total": 9749,
+        "completed": 3022,
+        "errors": 636
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_062.json"
+    },
+    {
+      "iteration": 63,
+      "timestamp": "2026-02-11T19:09:33.141548",
+      "counts": {
+        "total": 9749,
+        "completed": 3032,
+        "errors": 640
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_063.json"
+    },
+    {
+      "iteration": 64,
+      "timestamp": "2026-02-11T19:09:44.848045",
+      "counts": {
+        "total": 9749,
+        "completed": 3041,
+        "errors": 641
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_064.json"
+    },
+    {
+      "iteration": 65,
+      "timestamp": "2026-02-11T19:09:57.173048",
+      "counts": {
+        "total": 9749,
+        "completed": 3050,
+        "errors": 643
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_065.json"
+    },
+    {
+      "iteration": 66,
+      "timestamp": "2026-02-11T19:10:09.129485",
+      "counts": {
+        "total": 9749,
+        "completed": 3055,
+        "errors": 643
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_066.json"
+    },
+    {
+      "iteration": 67,
+      "timestamp": "2026-02-11T19:10:20.767177",
+      "counts": {
+        "total": 9749,
+        "completed": 3063,
+        "errors": 643
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_067.json"
+    },
+    {
+      "iteration": 68,
+      "timestamp": "2026-02-11T19:10:32.328436",
+      "counts": {
+        "total": 9749,
+        "completed": 3072,
+        "errors": 644
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_068.json"
+    },
+    {
+      "iteration": 69,
+      "timestamp": "2026-02-11T19:10:43.762614",
+      "counts": {
+        "total": 9749,
+        "completed": 3080,
+        "errors": 644
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_069.json"
+    },
+    {
+      "iteration": 70,
+      "timestamp": "2026-02-11T19:10:55.302215",
+      "counts": {
+        "total": 9749,
+        "completed": 3090,
+        "errors": 645
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_070.json"
+    },
+    {
+      "iteration": 71,
+      "timestamp": "2026-02-11T19:11:07.327497",
+      "counts": {
+        "total": 9749,
+        "completed": 3099,
+        "errors": 647
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_071.json"
+    },
+    {
+      "iteration": 72,
+      "timestamp": "2026-02-11T19:11:19.370874",
+      "counts": {
+        "total": 9749,
+        "completed": 3107,
+        "errors": 651
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_072.json"
+    },
+    {
+      "iteration": 73,
+      "timestamp": "2026-02-11T19:11:31.031061",
+      "counts": {
+        "total": 9749,
+        "completed": 3113,
+        "errors": 653
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_073.json"
+    },
+    {
+      "iteration": 74,
+      "timestamp": "2026-02-11T19:11:42.650518",
+      "counts": {
+        "total": 9749,
+        "completed": 3121,
+        "errors": 657
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_074.json"
+    },
+    {
+      "iteration": 75,
+      "timestamp": "2026-02-11T19:11:54.231630",
+      "counts": {
+        "total": 9749,
+        "completed": 3127,
+        "errors": 659
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_075.json"
+    },
+    {
+      "iteration": 76,
+      "timestamp": "2026-02-11T19:12:05.601965",
+      "counts": {
+        "total": 9749,
+        "completed": 3134,
+        "errors": 659
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_076.json"
+    },
+    {
+      "iteration": 77,
+      "timestamp": "2026-02-11T19:12:17.095098",
+      "counts": {
+        "total": 9749,
+        "completed": 3146,
+        "errors": 659
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_077.json"
+    },
+    {
+      "iteration": 78,
+      "timestamp": "2026-02-11T19:12:28.712836",
+      "counts": {
+        "total": 9749,
+        "completed": 3155,
+        "errors": 659
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_078.json"
+    },
+    {
+      "iteration": 79,
+      "timestamp": "2026-02-11T19:12:40.157727",
+      "counts": {
+        "total": 9749,
+        "completed": 3162,
+        "errors": 662
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_079.json"
+    },
+    {
+      "iteration": 80,
+      "timestamp": "2026-02-11T19:12:51.855296",
+      "counts": {
+        "total": 9749,
+        "completed": 3169,
+        "errors": 666
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_080.json"
+    },
+    {
+      "iteration": 81,
+      "timestamp": "2026-02-11T19:13:03.519994",
+      "counts": {
+        "total": 9749,
+        "completed": 3177,
+        "errors": 669
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_081.json"
+    },
+    {
+      "iteration": 82,
+      "timestamp": "2026-02-11T19:13:15.804555",
+      "counts": {
+        "total": 9749,
+        "completed": 3188,
+        "errors": 671
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_082.json"
+    },
+    {
+      "iteration": 83,
+      "timestamp": "2026-02-11T19:13:27.444023",
+      "counts": {
+        "total": 9749,
+        "completed": 3197,
+        "errors": 673
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_083.json"
+    },
+    {
+      "iteration": 84,
+      "timestamp": "2026-02-11T19:13:39.357452",
+      "counts": {
+        "total": 9749,
+        "completed": 3203,
+        "errors": 677
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_084.json"
+    },
+    {
+      "iteration": 85,
+      "timestamp": "2026-02-11T19:13:50.928088",
+      "counts": {
+        "total": 9749,
+        "completed": 3211,
+        "errors": 678
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_085.json"
+    },
+    {
+      "iteration": 86,
+      "timestamp": "2026-02-11T19:14:02.789881",
+      "counts": {
+        "total": 9749,
+        "completed": 3217,
+        "errors": 678
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_086.json"
+    },
+    {
+      "iteration": 87,
+      "timestamp": "2026-02-11T19:14:15.061538",
+      "counts": {
+        "total": 9749,
+        "completed": 3225,
+        "errors": 678
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_087.json"
+    },
+    {
+      "iteration": 88,
+      "timestamp": "2026-02-11T19:14:27.200408",
+      "counts": {
+        "total": 9749,
+        "completed": 3233,
+        "errors": 680
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_088.json"
+    },
+    {
+      "iteration": 89,
+      "timestamp": "2026-02-11T19:14:39.003457",
+      "counts": {
+        "total": 9749,
+        "completed": 3241,
+        "errors": 683
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_089.json"
+    },
+    {
+      "iteration": 90,
+      "timestamp": "2026-02-11T19:14:50.527066",
+      "counts": {
+        "total": 9749,
+        "completed": 3251,
+        "errors": 684
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_090.json"
+    },
+    {
+      "iteration": 91,
+      "timestamp": "2026-02-11T19:15:02.490033",
+      "counts": {
+        "total": 9749,
+        "completed": 3258,
+        "errors": 686
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_091.json"
+    },
+    {
+      "iteration": 92,
+      "timestamp": "2026-02-11T19:15:14.497241",
+      "counts": {
+        "total": 9749,
+        "completed": 3270,
+        "errors": 686
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_092.json"
+    },
+    {
+      "iteration": 93,
+      "timestamp": "2026-02-11T19:15:25.873242",
+      "counts": {
+        "total": 9749,
+        "completed": 3280,
+        "errors": 688
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_093.json"
+    },
+    {
+      "iteration": 94,
+      "timestamp": "2026-02-11T19:15:37.436723",
+      "counts": {
+        "total": 9749,
+        "completed": 3286,
+        "errors": 690
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_094.json"
+    },
+    {
+      "iteration": 95,
+      "timestamp": "2026-02-11T19:15:49.062072",
+      "counts": {
+        "total": 9749,
+        "completed": 3294,
+        "errors": 691
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_095.json"
+    },
+    {
+      "iteration": 96,
+      "timestamp": "2026-02-11T19:16:00.707537",
+      "counts": {
+        "total": 9749,
+        "completed": 3303,
+        "errors": 691
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_096.json"
+    },
+    {
+      "iteration": 97,
+      "timestamp": "2026-02-11T19:16:12.628574",
+      "counts": {
+        "total": 9749,
+        "completed": 3312,
+        "errors": 691
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_097.json"
+    },
+    {
+      "iteration": 98,
+      "timestamp": "2026-02-11T19:16:24.325395",
+      "counts": {
+        "total": 9749,
+        "completed": 3320,
+        "errors": 692
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_098.json"
+    },
+    {
+      "iteration": 99,
+      "timestamp": "2026-02-11T19:16:35.800620",
+      "counts": {
+        "total": 9749,
+        "completed": 3328,
+        "errors": 695
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_099.json"
+    },
+    {
+      "iteration": 100,
+      "timestamp": "2026-02-11T19:16:47.302564",
+      "counts": {
+        "total": 9749,
+        "completed": 3337,
+        "errors": 696
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_100.json"
+    },
+    {
+      "iteration": 101,
+      "timestamp": "2026-02-11T19:16:58.905657",
+      "counts": {
+        "total": 9749,
+        "completed": 3347,
+        "errors": 697
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_101.json"
+    },
+    {
+      "iteration": 102,
+      "timestamp": "2026-02-11T19:17:10.613745",
+      "counts": {
+        "total": 9749,
+        "completed": 3355,
+        "errors": 699
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_102.json"
+    },
+    {
+      "iteration": 103,
+      "timestamp": "2026-02-11T19:17:22.658850",
+      "counts": {
+        "total": 9749,
+        "completed": 3366,
+        "errors": 700
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_103.json"
+    },
+    {
+      "iteration": 104,
+      "timestamp": "2026-02-11T19:17:34.672483",
+      "counts": {
+        "total": 9749,
+        "completed": 3372,
+        "errors": 703
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_104.json"
+    },
+    {
+      "iteration": 105,
+      "timestamp": "2026-02-11T19:17:46.456921",
+      "counts": {
+        "total": 9749,
+        "completed": 3381,
+        "errors": 703
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_105.json"
+    },
+    {
+      "iteration": 106,
+      "timestamp": "2026-02-11T19:17:58.554151",
+      "counts": {
+        "total": 9749,
+        "completed": 3389,
+        "errors": 704
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_106.json"
+    },
+    {
+      "iteration": 107,
+      "timestamp": "2026-02-11T19:18:10.095747",
+      "counts": {
+        "total": 9749,
+        "completed": 3397,
+        "errors": 706
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_107.json"
+    },
+    {
+      "iteration": 108,
+      "timestamp": "2026-02-11T19:18:21.582451",
+      "counts": {
+        "total": 9749,
+        "completed": 3405,
+        "errors": 708
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_108.json"
+    },
+    {
+      "iteration": 109,
+      "timestamp": "2026-02-11T19:18:33.632535",
+      "counts": {
+        "total": 9749,
+        "completed": 3412,
+        "errors": 711
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_109.json"
+    },
+    {
+      "iteration": 110,
+      "timestamp": "2026-02-11T19:18:45.439011",
+      "counts": {
+        "total": 9749,
+        "completed": 3420,
+        "errors": 713
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_110.json"
+    },
+    {
+      "iteration": 111,
+      "timestamp": "2026-02-11T19:18:57.216127",
+      "counts": {
+        "total": 9749,
+        "completed": 3429,
+        "errors": 716
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_111.json"
+    },
+    {
+      "iteration": 112,
+      "timestamp": "2026-02-11T19:19:08.753417",
+      "counts": {
+        "total": 9749,
+        "completed": 3435,
+        "errors": 720
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_112.json"
+    },
+    {
+      "iteration": 113,
+      "timestamp": "2026-02-11T19:19:20.249125",
+      "counts": {
+        "total": 9749,
+        "completed": 3444,
+        "errors": 722
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_113.json"
+    },
+    {
+      "iteration": 114,
+      "timestamp": "2026-02-11T19:19:31.983714",
+      "counts": {
+        "total": 9749,
+        "completed": 3451,
+        "errors": 724
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_114.json"
+    },
+    {
+      "iteration": 115,
+      "timestamp": "2026-02-11T19:19:43.768784",
+      "counts": {
+        "total": 9749,
+        "completed": 3457,
+        "errors": 724
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_115.json"
+    },
+    {
+      "iteration": 116,
+      "timestamp": "2026-02-11T19:19:55.349127",
+      "counts": {
+        "total": 9749,
+        "completed": 3464,
+        "errors": 724
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_116.json"
+    },
+    {
+      "iteration": 117,
+      "timestamp": "2026-02-11T19:20:07.041612",
+      "counts": {
+        "total": 9749,
+        "completed": 3474,
+        "errors": 724
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_117.json"
+    },
+    {
+      "iteration": 118,
+      "timestamp": "2026-02-11T19:20:18.860083",
+      "counts": {
+        "total": 9749,
+        "completed": 3484,
+        "errors": 725
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_118.json"
+    },
+    {
+      "iteration": 119,
+      "timestamp": "2026-02-11T19:20:30.578719",
+      "counts": {
+        "total": 9749,
+        "completed": 3493,
+        "errors": 726
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_119.json"
+    },
+    {
+      "iteration": 120,
+      "timestamp": "2026-02-11T19:20:43.327307",
+      "counts": {
+        "total": 9749,
+        "completed": 3502,
+        "errors": 728
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_120.json"
+    },
+    {
+      "iteration": 121,
+      "timestamp": "2026-02-11T19:20:55.388689",
+      "counts": {
+        "total": 9749,
+        "completed": 3510,
+        "errors": 732
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_121.json"
+    },
+    {
+      "iteration": 122,
+      "timestamp": "2026-02-11T19:21:07.704914",
+      "counts": {
+        "total": 9749,
+        "completed": 3517,
+        "errors": 735
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_122.json"
+    },
+    {
+      "iteration": 123,
+      "timestamp": "2026-02-11T19:21:19.463946",
+      "counts": {
+        "total": 9749,
+        "completed": 3527,
+        "errors": 736
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_123.json"
+    },
+    {
+      "iteration": 124,
+      "timestamp": "2026-02-11T19:21:31.433230",
+      "counts": {
+        "total": 9749,
+        "completed": 3534,
+        "errors": 736
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_124.json"
+    },
+    {
+      "iteration": 125,
+      "timestamp": "2026-02-11T19:21:43.303276",
+      "counts": {
+        "total": 9749,
+        "completed": 3543,
+        "errors": 736
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_125.json"
+    },
+    {
+      "iteration": 126,
+      "timestamp": "2026-02-11T19:21:54.982390",
+      "counts": {
+        "total": 9749,
+        "completed": 3551,
+        "errors": 736
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_126.json"
+    },
+    {
+      "iteration": 127,
+      "timestamp": "2026-02-11T19:22:06.691512",
+      "counts": {
+        "total": 9749,
+        "completed": 3560,
+        "errors": 738
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_127.json"
+    },
+    {
+      "iteration": 128,
+      "timestamp": "2026-02-11T19:22:18.745170",
+      "counts": {
+        "total": 9749,
+        "completed": 3568,
+        "errors": 741
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_128.json"
+    },
+    {
+      "iteration": 129,
+      "timestamp": "2026-02-11T19:22:30.349270",
+      "counts": {
+        "total": 9749,
+        "completed": 3577,
+        "errors": 743
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_129.json"
+    },
+    {
+      "iteration": 130,
+      "timestamp": "2026-02-11T19:22:41.950633",
+      "counts": {
+        "total": 9749,
+        "completed": 3584,
+        "errors": 744
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_130.json"
+    },
+    {
+      "iteration": 131,
+      "timestamp": "2026-02-11T19:22:53.466411",
+      "counts": {
+        "total": 9749,
+        "completed": 3591,
+        "errors": 748
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_131.json"
+    },
+    {
+      "iteration": 132,
+      "timestamp": "2026-02-11T19:23:05.030493",
+      "counts": {
+        "total": 9749,
+        "completed": 3598,
+        "errors": 750
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_132.json"
+    },
+    {
+      "iteration": 133,
+      "timestamp": "2026-02-11T19:23:16.435205",
+      "counts": {
+        "total": 9749,
+        "completed": 3604,
+        "errors": 755
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_133.json"
+    },
+    {
+      "iteration": 134,
+      "timestamp": "2026-02-11T19:23:27.723023",
+      "counts": {
+        "total": 9749,
+        "completed": 3611,
+        "errors": 756
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_134.json"
+    },
+    {
+      "iteration": 135,
+      "timestamp": "2026-02-11T19:23:39.045092",
+      "counts": {
+        "total": 9749,
+        "completed": 3619,
+        "errors": 756
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_135.json"
+    },
+    {
+      "iteration": 136,
+      "timestamp": "2026-02-11T19:23:50.432581",
+      "counts": {
+        "total": 9749,
+        "completed": 3630,
+        "errors": 756
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_136.json"
+    },
+    {
+      "iteration": 137,
+      "timestamp": "2026-02-11T19:24:01.808412",
+      "counts": {
+        "total": 9749,
+        "completed": 3636,
+        "errors": 759
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_137.json"
+    },
+    {
+      "iteration": 138,
+      "timestamp": "2026-02-11T19:24:13.167510",
+      "counts": {
+        "total": 9749,
+        "completed": 3643,
+        "errors": 763
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_138.json"
+    },
+    {
+      "iteration": 139,
+      "timestamp": "2026-02-11T19:24:24.498410",
+      "counts": {
+        "total": 9749,
+        "completed": 3651,
+        "errors": 766
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_139.json"
+    },
+    {
+      "iteration": 140,
+      "timestamp": "2026-02-11T19:24:36.004412",
+      "counts": {
+        "total": 9749,
+        "completed": 3657,
+        "errors": 768
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_140.json"
+    },
+    {
+      "iteration": 141,
+      "timestamp": "2026-02-11T19:24:47.555059",
+      "counts": {
+        "total": 9749,
+        "completed": 3667,
+        "errors": 770
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_141.json"
+    },
+    {
+      "iteration": 142,
+      "timestamp": "2026-02-11T19:24:59.667142",
+      "counts": {
+        "total": 9749,
+        "completed": 3673,
+        "errors": 774
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_142.json"
+    },
+    {
+      "iteration": 143,
+      "timestamp": "2026-02-11T19:25:12.441684",
+      "counts": {
+        "total": 9749,
+        "completed": 3681,
+        "errors": 777
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_143.json"
+    },
+    {
+      "iteration": 144,
+      "timestamp": "2026-02-11T19:25:25.094037",
+      "counts": {
+        "total": 9749,
+        "completed": 3689,
+        "errors": 778
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_144.json"
+    },
+    {
+      "iteration": 145,
+      "timestamp": "2026-02-11T19:25:36.519456",
+      "counts": {
+        "total": 9749,
+        "completed": 3700,
+        "errors": 778
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_145.json"
+    },
+    {
+      "iteration": 146,
+      "timestamp": "2026-02-11T19:25:48.310841",
+      "counts": {
+        "total": 9749,
+        "completed": 3708,
+        "errors": 778
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_146.json"
+    },
+    {
+      "iteration": 147,
+      "timestamp": "2026-02-11T19:26:00.501477",
+      "counts": {
+        "total": 9749,
+        "completed": 3718,
+        "errors": 779
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_147.json"
+    },
+    {
+      "iteration": 148,
+      "timestamp": "2026-02-11T19:26:13.380797",
+      "counts": {
+        "total": 9749,
+        "completed": 3727,
+        "errors": 780
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_148.json"
+    },
+    {
+      "iteration": 149,
+      "timestamp": "2026-02-11T19:26:26.274118",
+      "counts": {
+        "total": 9749,
+        "completed": 3740,
+        "errors": 781
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_149.json"
+    },
+    {
+      "iteration": 150,
+      "timestamp": "2026-02-11T19:26:38.012152",
+      "counts": {
+        "total": 9749,
+        "completed": 3747,
+        "errors": 784
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_150.json"
+    },
+    {
+      "iteration": 151,
+      "timestamp": "2026-02-11T19:26:49.939958",
+      "counts": {
+        "total": 9749,
+        "completed": 3756,
+        "errors": 787
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_151.json"
+    },
+    {
+      "iteration": 152,
+      "timestamp": "2026-02-11T19:27:01.511599",
+      "counts": {
+        "total": 9749,
+        "completed": 3767,
+        "errors": 788
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_152.json"
+    },
+    {
+      "iteration": 153,
+      "timestamp": "2026-02-11T19:27:13.244133",
+      "counts": {
+        "total": 9749,
+        "completed": 3772,
+        "errors": 790
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_153.json"
+    },
+    {
+      "iteration": 154,
+      "timestamp": "2026-02-11T19:27:24.722362",
+      "counts": {
+        "total": 9749,
+        "completed": 3780,
+        "errors": 10
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_154.json"
+    },
+    {
+      "iteration": 155,
+      "timestamp": "2026-02-11T19:27:36.612655",
+      "counts": {
+        "total": 9749,
+        "completed": 3791,
+        "errors": 10
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_155.json"
+    },
+    {
+      "iteration": 156,
+      "timestamp": "2026-02-11T19:27:49.299168",
+      "counts": {
+        "total": 9749,
+        "completed": 3801,
+        "errors": 12
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_156.json"
+    },
+    {
+      "iteration": 157,
+      "timestamp": "2026-02-11T19:28:01.069444",
+      "counts": {
+        "total": 9749,
+        "completed": 3810,
+        "errors": 13
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_157.json"
+    },
+    {
+      "iteration": 158,
+      "timestamp": "2026-02-11T19:28:12.678031",
+      "counts": {
+        "total": 9749,
+        "completed": 3821,
+        "errors": 13
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_158.json"
+    },
+    {
+      "iteration": 159,
+      "timestamp": "2026-02-11T19:28:24.200845",
+      "counts": {
+        "total": 9749,
+        "completed": 3830,
+        "errors": 14
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_159.json"
+    },
+    {
+      "iteration": 160,
+      "timestamp": "2026-02-11T19:28:35.658242",
+      "counts": {
+        "total": 9749,
+        "completed": 3838,
+        "errors": 17
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_160.json"
+    },
+    {
+      "iteration": 161,
+      "timestamp": "2026-02-11T19:28:47.247828",
+      "counts": {
+        "total": 9749,
+        "completed": 3848,
+        "errors": 18
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_161.json"
+    },
+    {
+      "iteration": 162,
+      "timestamp": "2026-02-11T19:28:59.057875",
+      "counts": {
+        "total": 9749,
+        "completed": 3854,
+        "errors": 24
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_162.json"
+    },
+    {
+      "iteration": 163,
+      "timestamp": "2026-02-11T19:29:12.653561",
+      "counts": {
+        "total": 9749,
+        "completed": 3861,
+        "errors": 25
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_163.json"
+    },
+    {
+      "iteration": 164,
+      "timestamp": "2026-02-11T19:29:24.847147",
+      "counts": {
+        "total": 9749,
+        "completed": 3871,
+        "errors": 25
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_164.json"
+    },
+    {
+      "iteration": 165,
+      "timestamp": "2026-02-11T19:29:36.502012",
+      "counts": {
+        "total": 9749,
+        "completed": 3878,
+        "errors": 28
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_165.json"
+    },
+    {
+      "iteration": 166,
+      "timestamp": "2026-02-11T19:29:49.430512",
+      "counts": {
+        "total": 9749,
+        "completed": 3886,
+        "errors": 32
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_166.json"
+    },
+    {
+      "iteration": 167,
+      "timestamp": "2026-02-11T19:30:02.255427",
+      "counts": {
+        "total": 9749,
+        "completed": 3894,
+        "errors": 35
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_167.json"
+    },
+    {
+      "iteration": 168,
+      "timestamp": "2026-02-11T19:30:14.155890",
+      "counts": {
+        "total": 9749,
+        "completed": 3902,
+        "errors": 34
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_168.json"
+    },
+    {
+      "iteration": 169,
+      "timestamp": "2026-02-11T19:30:25.735372",
+      "counts": {
+        "total": 9749,
+        "completed": 3911,
+        "errors": 29
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_169.json"
+    },
+    {
+      "iteration": 170,
+      "timestamp": "2026-02-11T19:30:37.638767",
+      "counts": {
+        "total": 9749,
+        "completed": 3919,
+        "errors": 30
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_170.json"
+    },
+    {
+      "iteration": 171,
+      "timestamp": "2026-02-11T19:30:50.226387",
+      "counts": {
+        "total": 9749,
+        "completed": 3926,
+        "errors": 32
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_171.json"
+    },
+    {
+      "iteration": 172,
+      "timestamp": "2026-02-11T19:31:01.711371",
+      "counts": {
+        "total": 9749,
+        "completed": 3932,
+        "errors": 32
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_172.json"
+    },
+    {
+      "iteration": 173,
+      "timestamp": "2026-02-11T19:31:13.053881",
+      "counts": {
+        "total": 9749,
+        "completed": 3937,
+        "errors": 28
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_173.json"
+    },
+    {
+      "iteration": 174,
+      "timestamp": "2026-02-11T19:31:25.424956",
+      "counts": {
+        "total": 9749,
+        "completed": 3947,
+        "errors": 26
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_174.json"
+    },
+    {
+      "iteration": 175,
+      "timestamp": "2026-02-11T19:31:37.624924",
+      "counts": {
+        "total": 9749,
+        "completed": 3956,
+        "errors": 26
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_175.json"
+    },
+    {
+      "iteration": 176,
+      "timestamp": "2026-02-11T19:31:49.360482",
+      "counts": {
+        "total": 9749,
+        "completed": 3963,
+        "errors": 26
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_176.json"
+    },
+    {
+      "iteration": 177,
+      "timestamp": "2026-02-11T19:32:01.131805",
+      "counts": {
+        "total": 9749,
+        "completed": 3973,
+        "errors": 26
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_177.json"
+    },
+    {
+      "iteration": 178,
+      "timestamp": "2026-02-11T19:32:14.226780",
+      "counts": {
+        "total": 9749,
+        "completed": 3983,
+        "errors": 27
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_178.json"
+    },
+    {
+      "iteration": 179,
+      "timestamp": "2026-02-11T19:32:28.021037",
+      "counts": {
+        "total": 9749,
+        "completed": 3993,
+        "errors": 28
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_179.json"
+    },
+    {
+      "iteration": 180,
+      "timestamp": "2026-02-11T19:32:40.342478",
+      "counts": {
+        "total": 9749,
+        "completed": 4002,
+        "errors": 29
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_180.json"
+    },
+    {
+      "iteration": 181,
+      "timestamp": "2026-02-11T19:32:52.735515",
+      "counts": {
+        "total": 9749,
+        "completed": 4011,
+        "errors": 32
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_181.json"
+    },
+    {
+      "iteration": 182,
+      "timestamp": "2026-02-11T19:33:04.358403",
+      "counts": {
+        "total": 9749,
+        "completed": 4020,
+        "errors": 31
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_182.json"
+    },
+    {
+      "iteration": 183,
+      "timestamp": "2026-02-11T19:33:16.856518",
+      "counts": {
+        "total": 9749,
+        "completed": 4029,
+        "errors": 30
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_183.json"
+    },
+    {
+      "iteration": 184,
+      "timestamp": "2026-02-11T19:33:28.972484",
+      "counts": {
+        "total": 9749,
+        "completed": 4039,
+        "errors": 28
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_184.json"
+    },
+    {
+      "iteration": 185,
+      "timestamp": "2026-02-11T19:33:40.248504",
+      "counts": {
+        "total": 9749,
+        "completed": 4046,
+        "errors": 27
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_185.json"
+    },
+    {
+      "iteration": 186,
+      "timestamp": "2026-02-11T19:33:52.973618",
+      "counts": {
+        "total": 9749,
+        "completed": 4056,
+        "errors": 26
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_186.json"
+    },
+    {
+      "iteration": 187,
+      "timestamp": "2026-02-11T19:34:05.439283",
+      "counts": {
+        "total": 9749,
+        "completed": 4066,
+        "errors": 28
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_187.json"
+    },
+    {
+      "iteration": 188,
+      "timestamp": "2026-02-11T19:34:17.119149",
+      "counts": {
+        "total": 9749,
+        "completed": 4074,
+        "errors": 31
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_188.json"
+    },
+    {
+      "iteration": 189,
+      "timestamp": "2026-02-11T19:34:28.828065",
+      "counts": {
+        "total": 9749,
+        "completed": 4083,
+        "errors": 33
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_189.json"
+    },
+    {
+      "iteration": 190,
+      "timestamp": "2026-02-11T19:34:41.677501",
+      "counts": {
+        "total": 9749,
+        "completed": 4092,
+        "errors": 35
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_190.json"
+    },
+    {
+      "iteration": 191,
+      "timestamp": "2026-02-11T19:34:53.421111",
+      "counts": {
+        "total": 9749,
+        "completed": 4101,
+        "errors": 36
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_191.json"
+    },
+    {
+      "iteration": 192,
+      "timestamp": "2026-02-11T19:35:05.921753",
+      "counts": {
+        "total": 9749,
+        "completed": 4114,
+        "errors": 36
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_192.json"
+    },
+    {
+      "iteration": 193,
+      "timestamp": "2026-02-11T19:35:17.604597",
+      "counts": {
+        "total": 9749,
+        "completed": 4121,
+        "errors": 37
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_193.json"
+    },
+    {
+      "iteration": 194,
+      "timestamp": "2026-02-11T19:35:29.880575",
+      "counts": {
+        "total": 9749,
+        "completed": 4128,
+        "errors": 41
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_194.json"
+    },
+    {
+      "iteration": 195,
+      "timestamp": "2026-02-11T19:35:42.266534",
+      "counts": {
+        "total": 9749,
+        "completed": 4140,
+        "errors": 41
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_195.json"
+    },
+    {
+      "iteration": 196,
+      "timestamp": "2026-02-11T19:35:54.043799",
+      "counts": {
+        "total": 9749,
+        "completed": 4148,
+        "errors": 43
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_196.json"
+    },
+    {
+      "iteration": 197,
+      "timestamp": "2026-02-11T19:36:05.896297",
+      "counts": {
+        "total": 9749,
+        "completed": 4158,
+        "errors": 43
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_197.json"
+    },
+    {
+      "iteration": 198,
+      "timestamp": "2026-02-11T19:36:17.533449",
+      "counts": {
+        "total": 9749,
+        "completed": 4165,
+        "errors": 45
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_198.json"
+    },
+    {
+      "iteration": 199,
+      "timestamp": "2026-02-11T19:36:29.065601",
+      "counts": {
+        "total": 9749,
+        "completed": 4172,
+        "errors": 48
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_199.json"
+    },
+    {
+      "iteration": 200,
+      "timestamp": "2026-02-11T19:36:40.800707",
+      "counts": {
+        "total": 9749,
+        "completed": 4182,
+        "errors": 49
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_200.json"
+    },
+    {
+      "iteration": 201,
+      "timestamp": "2026-02-11T19:36:52.692130",
+      "counts": {
+        "total": 9749,
+        "completed": 4192,
+        "errors": 49
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_201.json"
+    },
+    {
+      "iteration": 202,
+      "timestamp": "2026-02-11T19:37:04.490767",
+      "counts": {
+        "total": 9749,
+        "completed": 4199,
+        "errors": 50
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_202.json"
+    },
+    {
+      "iteration": 203,
+      "timestamp": "2026-02-11T19:37:16.008213",
+      "counts": {
+        "total": 9749,
+        "completed": 4205,
+        "errors": 54
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_203.json"
+    },
+    {
+      "iteration": 204,
+      "timestamp": "2026-02-11T19:37:27.623014",
+      "counts": {
+        "total": 9749,
+        "completed": 4214,
+        "errors": 56
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_204.json"
+    },
+    {
+      "iteration": 205,
+      "timestamp": "2026-02-11T19:37:39.489932",
+      "counts": {
+        "total": 9749,
+        "completed": 4223,
+        "errors": 56
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_205.json"
+    },
+    {
+      "iteration": 206,
+      "timestamp": "2026-02-11T19:37:51.038275",
+      "counts": {
+        "total": 9749,
+        "completed": 4233,
+        "errors": 57
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_206.json"
+    },
+    {
+      "iteration": 207,
+      "timestamp": "2026-02-11T19:38:02.670234",
+      "counts": {
+        "total": 9749,
+        "completed": 4240,
+        "errors": 60
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_207.json"
+    },
+    {
+      "iteration": 208,
+      "timestamp": "2026-02-11T19:38:15.004272",
+      "counts": {
+        "total": 9749,
+        "completed": 4247,
+        "errors": 64
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_208.json"
+    },
+    {
+      "iteration": 209,
+      "timestamp": "2026-02-11T19:38:27.277312",
+      "counts": {
+        "total": 9749,
+        "completed": 4255,
+        "errors": 66
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_209.json"
+    },
+    {
+      "iteration": 210,
+      "timestamp": "2026-02-11T19:38:39.489175",
+      "counts": {
+        "total": 9749,
+        "completed": 4264,
+        "errors": 69
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_210.json"
+    },
+    {
+      "iteration": 211,
+      "timestamp": "2026-02-11T19:38:51.004916",
+      "counts": {
+        "total": 9749,
+        "completed": 4269,
+        "errors": 69
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_211.json"
+    },
+    {
+      "iteration": 212,
+      "timestamp": "2026-02-11T19:39:02.547925",
+      "counts": {
+        "total": 9749,
+        "completed": 4277,
+        "errors": 69
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_212.json"
+    },
+    {
+      "iteration": 213,
+      "timestamp": "2026-02-11T19:39:14.353088",
+      "counts": {
+        "total": 9749,
+        "completed": 4285,
+        "errors": 72
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_213.json"
+    },
+    {
+      "iteration": 214,
+      "timestamp": "2026-02-11T19:39:26.873945",
+      "counts": {
+        "total": 9749,
+        "completed": 4295,
+        "errors": 72
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_214.json"
+    },
+    {
+      "iteration": 215,
+      "timestamp": "2026-02-11T19:39:39.354707",
+      "counts": {
+        "total": 9749,
+        "completed": 4302,
+        "errors": 76
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_215.json"
+    },
+    {
+      "iteration": 216,
+      "timestamp": "2026-02-11T19:39:52.168447",
+      "counts": {
+        "total": 9749,
+        "completed": 4311,
+        "errors": 79
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_216.json"
+    },
+    {
+      "iteration": 217,
+      "timestamp": "2026-02-11T19:40:04.176547",
+      "counts": {
+        "total": 9749,
+        "completed": 4318,
+        "errors": 82
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_217.json"
+    },
+    {
+      "iteration": 218,
+      "timestamp": "2026-02-11T19:40:15.610443",
+      "counts": {
+        "total": 9749,
+        "completed": 4326,
+        "errors": 84
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_218.json"
+    },
+    {
+      "iteration": 219,
+      "timestamp": "2026-02-11T19:40:27.413212",
+      "counts": {
+        "total": 9749,
+        "completed": 4334,
+        "errors": 85
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_219.json"
+    },
+    {
+      "iteration": 220,
+      "timestamp": "2026-02-11T19:40:38.929445",
+      "counts": {
+        "total": 9749,
+        "completed": 4341,
+        "errors": 87
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_220.json"
+    },
+    {
+      "iteration": 221,
+      "timestamp": "2026-02-11T19:40:50.992368",
+      "counts": {
+        "total": 9749,
+        "completed": 4348,
+        "errors": 87
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_221.json"
+    },
+    {
+      "iteration": 222,
+      "timestamp": "2026-02-11T19:41:02.534482",
+      "counts": {
+        "total": 9749,
+        "completed": 4355,
+        "errors": 87
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_222.json"
+    },
+    {
+      "iteration": 223,
+      "timestamp": "2026-02-11T19:41:13.894284",
+      "counts": {
+        "total": 9749,
+        "completed": 4361,
+        "errors": 92
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_223.json"
+    },
+    {
+      "iteration": 224,
+      "timestamp": "2026-02-11T19:41:25.399732",
+      "counts": {
+        "total": 9749,
+        "completed": 4368,
+        "errors": 94
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_224.json"
+    },
+    {
+      "iteration": 225,
+      "timestamp": "2026-02-11T19:41:37.096511",
+      "counts": {
+        "total": 9749,
+        "completed": 4376,
+        "errors": 96
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_225.json"
+    },
+    {
+      "iteration": 226,
+      "timestamp": "2026-02-11T19:41:48.733408",
+      "counts": {
+        "total": 9749,
+        "completed": 4384,
+        "errors": 99
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_226.json"
+    },
+    {
+      "iteration": 227,
+      "timestamp": "2026-02-11T19:42:00.237577",
+      "counts": {
+        "total": 9749,
+        "completed": 4389,
+        "errors": 103
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_227.json"
+    },
+    {
+      "iteration": 228,
+      "timestamp": "2026-02-11T19:42:11.523726",
+      "counts": {
+        "total": 9749,
+        "completed": 4396,
+        "errors": 108
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_228.json"
+    },
+    {
+      "iteration": 229,
+      "timestamp": "2026-02-11T19:42:23.692410",
+      "counts": {
+        "total": 9749,
+        "completed": 4405,
+        "errors": 110
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_229.json"
+    },
+    {
+      "iteration": 230,
+      "timestamp": "2026-02-11T19:42:35.954605",
+      "counts": {
+        "total": 9749,
+        "completed": 4411,
+        "errors": 110
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_230.json"
+    },
+    {
+      "iteration": 231,
+      "timestamp": "2026-02-11T19:42:47.583527",
+      "counts": {
+        "total": 9749,
+        "completed": 4418,
+        "errors": 110
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_231.json"
+    },
+    {
+      "iteration": 232,
+      "timestamp": "2026-02-11T19:42:59.047083",
+      "counts": {
+        "total": 9749,
+        "completed": 4428,
+        "errors": 110
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_232.json"
+    },
+    {
+      "iteration": 233,
+      "timestamp": "2026-02-11T19:43:10.569961",
+      "counts": {
+        "total": 9749,
+        "completed": 4435,
+        "errors": 112
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_233.json"
+    },
+    {
+      "iteration": 234,
+      "timestamp": "2026-02-11T19:43:21.998478",
+      "counts": {
+        "total": 9749,
+        "completed": 4443,
+        "errors": 115
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_234.json"
+    },
+    {
+      "iteration": 235,
+      "timestamp": "2026-02-11T19:43:33.408924",
+      "counts": {
+        "total": 9749,
+        "completed": 4451,
+        "errors": 117
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_235.json"
+    },
+    {
+      "iteration": 236,
+      "timestamp": "2026-02-11T19:43:45.147511",
+      "counts": {
+        "total": 9749,
+        "completed": 4461,
+        "errors": 118
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_236.json"
+    },
+    {
+      "iteration": 237,
+      "timestamp": "2026-02-11T19:43:57.781432",
+      "counts": {
+        "total": 9749,
+        "completed": 4469,
+        "errors": 121
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_237.json"
+    },
+    {
+      "iteration": 238,
+      "timestamp": "2026-02-11T19:44:11.282576",
+      "counts": {
+        "total": 9749,
+        "completed": 4480,
+        "errors": 122
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_238.json"
+    },
+    {
+      "iteration": 239,
+      "timestamp": "2026-02-11T19:44:23.534816",
+      "counts": {
+        "total": 9749,
+        "completed": 4490,
+        "errors": 123
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_239.json"
+    },
+    {
+      "iteration": 240,
+      "timestamp": "2026-02-11T19:44:36.119696",
+      "counts": {
+        "total": 9749,
+        "completed": 4500,
+        "errors": 123
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_240.json"
+    },
+    {
+      "iteration": 241,
+      "timestamp": "2026-02-11T19:44:49.669167",
+      "counts": {
+        "total": 9749,
+        "completed": 4510,
+        "errors": 123
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_241.json"
+    },
+    {
+      "iteration": 242,
+      "timestamp": "2026-02-11T19:45:01.895749",
+      "counts": {
+        "total": 9749,
+        "completed": 4519,
+        "errors": 127
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_242.json"
+    },
+    {
+      "iteration": 243,
+      "timestamp": "2026-02-11T19:45:14.112862",
+      "counts": {
+        "total": 9749,
+        "completed": 4527,
+        "errors": 130
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_243.json"
+    },
+    {
+      "iteration": 244,
+      "timestamp": "2026-02-11T19:45:25.656445",
+      "counts": {
+        "total": 9749,
+        "completed": 4536,
+        "errors": 130
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_244.json"
+    },
+    {
+      "iteration": 245,
+      "timestamp": "2026-02-11T19:45:38.785396",
+      "counts": {
+        "total": 9749,
+        "completed": 4545,
+        "errors": 134
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_245.json"
+    },
+    {
+      "iteration": 246,
+      "timestamp": "2026-02-11T19:45:51.185769",
+      "counts": {
+        "total": 9749,
+        "completed": 4557,
+        "errors": 134
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_246.json"
+    },
+    {
+      "iteration": 247,
+      "timestamp": "2026-02-11T19:46:03.247311",
+      "counts": {
+        "total": 9749,
+        "completed": 4566,
+        "errors": 136
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_247.json"
+    },
+    {
+      "iteration": 248,
+      "timestamp": "2026-02-11T19:46:15.601036",
+      "counts": {
+        "total": 9749,
+        "completed": 4572,
+        "errors": 138
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_248.json"
+    },
+    {
+      "iteration": 249,
+      "timestamp": "2026-02-11T19:46:27.340212",
+      "counts": {
+        "total": 9749,
+        "completed": 4580,
+        "errors": 138
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_249.json"
+    },
+    {
+      "iteration": 250,
+      "timestamp": "2026-02-11T19:46:38.991684",
+      "counts": {
+        "total": 9749,
+        "completed": 4592,
+        "errors": 138
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_250.json"
+    },
+    {
+      "iteration": 251,
+      "timestamp": "2026-02-11T19:46:50.621219",
+      "counts": {
+        "total": 9749,
+        "completed": 4597,
+        "errors": 142
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_251.json"
+    },
+    {
+      "iteration": 252,
+      "timestamp": "2026-02-11T19:47:02.095829",
+      "counts": {
+        "total": 9749,
+        "completed": 4605,
+        "errors": 145
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_252.json"
+    },
+    {
+      "iteration": 253,
+      "timestamp": "2026-02-11T19:47:13.634230",
+      "counts": {
+        "total": 9749,
+        "completed": 4613,
+        "errors": 147
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_253.json"
+    },
+    {
+      "iteration": 254,
+      "timestamp": "2026-02-11T19:47:25.127087",
+      "counts": {
+        "total": 9749,
+        "completed": 4622,
+        "errors": 149
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_254.json"
+    },
+    {
+      "iteration": 255,
+      "timestamp": "2026-02-11T19:47:36.671844",
+      "counts": {
+        "total": 9749,
+        "completed": 4629,
+        "errors": 152
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_255.json"
+    },
+    {
+      "iteration": 256,
+      "timestamp": "2026-02-11T19:47:48.317772",
+      "counts": {
+        "total": 9749,
+        "completed": 4638,
+        "errors": 153
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_256.json"
+    },
+    {
+      "iteration": 257,
+      "timestamp": "2026-02-11T19:47:59.858456",
+      "counts": {
+        "total": 9749,
+        "completed": 4646,
+        "errors": 156
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_257.json"
+    },
+    {
+      "iteration": 258,
+      "timestamp": "2026-02-11T19:48:11.218062",
+      "counts": {
+        "total": 9749,
+        "completed": 4654,
+        "errors": 157
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_258.json"
+    },
+    {
+      "iteration": 259,
+      "timestamp": "2026-02-11T19:48:22.777409",
+      "counts": {
+        "total": 9749,
+        "completed": 4664,
+        "errors": 157
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_259.json"
+    },
+    {
+      "iteration": 260,
+      "timestamp": "2026-02-11T19:48:34.537550",
+      "counts": {
+        "total": 9749,
+        "completed": 4673,
+        "errors": 157
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_260.json"
+    },
+    {
+      "iteration": 261,
+      "timestamp": "2026-02-11T19:48:46.029737",
+      "counts": {
+        "total": 9749,
+        "completed": 4680,
+        "errors": 159
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_261.json"
+    },
+    {
+      "iteration": 262,
+      "timestamp": "2026-02-11T19:48:57.525416",
+      "counts": {
+        "total": 9749,
+        "completed": 4689,
+        "errors": 162
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_262.json"
+    },
+    {
+      "iteration": 263,
+      "timestamp": "2026-02-11T19:49:09.273682",
+      "counts": {
+        "total": 9749,
+        "completed": 4700,
+        "errors": 163
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_263.json"
+    },
+    {
+      "iteration": 264,
+      "timestamp": "2026-02-11T19:49:20.776099",
+      "counts": {
+        "total": 9749,
+        "completed": 4708,
+        "errors": 165
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_264.json"
+    },
+    {
+      "iteration": 265,
+      "timestamp": "2026-02-11T19:49:32.346461",
+      "counts": {
+        "total": 9749,
+        "completed": 4718,
+        "errors": 166
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_265.json"
+    },
+    {
+      "iteration": 266,
+      "timestamp": "2026-02-11T19:49:45.055001",
+      "counts": {
+        "total": 9749,
+        "completed": 4728,
+        "errors": 168
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_266.json"
+    },
+    {
+      "iteration": 267,
+      "timestamp": "2026-02-11T19:49:56.507644",
+      "counts": {
+        "total": 9749,
+        "completed": 4734,
+        "errors": 169
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_267.json"
+    },
+    {
+      "iteration": 268,
+      "timestamp": "2026-02-11T19:50:08.063708",
+      "counts": {
+        "total": 9749,
+        "completed": 4742,
+        "errors": 169
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_268.json"
+    },
+    {
+      "iteration": 269,
+      "timestamp": "2026-02-11T19:50:19.676344",
+      "counts": {
+        "total": 9749,
+        "completed": 4752,
+        "errors": 169
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_269.json"
+    },
+    {
+      "iteration": 270,
+      "timestamp": "2026-02-11T19:50:31.656364",
+      "counts": {
+        "total": 9749,
+        "completed": 4759,
+        "errors": 173
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_270.json"
+    },
+    {
+      "iteration": 271,
+      "timestamp": "2026-02-11T19:50:44.221856",
+      "counts": {
+        "total": 9749,
+        "completed": 4767,
+        "errors": 175
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_271.json"
+    },
+    {
+      "iteration": 272,
+      "timestamp": "2026-02-11T19:50:56.238741",
+      "counts": {
+        "total": 9749,
+        "completed": 4774,
+        "errors": 178
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_272.json"
+    },
+    {
+      "iteration": 273,
+      "timestamp": "2026-02-11T19:51:08.020819",
+      "counts": {
+        "total": 9749,
+        "completed": 4784,
+        "errors": 179
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_273.json"
+    },
+    {
+      "iteration": 274,
+      "timestamp": "2026-02-11T19:51:19.974922",
+      "counts": {
+        "total": 9749,
+        "completed": 4793,
+        "errors": 181
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_274.json"
+    },
+    {
+      "iteration": 275,
+      "timestamp": "2026-02-11T19:51:31.503869",
+      "counts": {
+        "total": 9749,
+        "completed": 4813,
+        "errors": 171
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_275.json"
+    },
+    {
+      "iteration": 276,
+      "timestamp": "2026-02-11T19:51:43.448773",
+      "counts": {
+        "total": 9749,
+        "completed": 4822,
+        "errors": 171
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_276.json"
+    },
+    {
+      "iteration": 277,
+      "timestamp": "2026-02-11T19:51:55.151804",
+      "counts": {
+        "total": 9749,
+        "completed": 4830,
+        "errors": 172
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_277.json"
+    },
+    {
+      "iteration": 278,
+      "timestamp": "2026-02-11T19:52:06.766898",
+      "counts": {
+        "total": 9749,
+        "completed": 4838,
+        "errors": 173
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_278.json"
+    },
+    {
+      "iteration": 279,
+      "timestamp": "2026-02-11T19:52:18.174275",
+      "counts": {
+        "total": 9749,
+        "completed": 4841,
+        "errors": 178
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_279.json"
+    },
+    {
+      "iteration": 280,
+      "timestamp": "2026-02-11T19:52:29.613753",
+      "counts": {
+        "total": 9749,
+        "completed": 4851,
+        "errors": 179
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_280.json"
+    },
+    {
+      "iteration": 281,
+      "timestamp": "2026-02-11T19:52:41.485128",
+      "counts": {
+        "total": 9749,
+        "completed": 4860,
+        "errors": 179
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_281.json"
+    },
+    {
+      "iteration": 282,
+      "timestamp": "2026-02-11T19:52:53.023968",
+      "counts": {
+        "total": 9749,
+        "completed": 4867,
+        "errors": 183
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_282.json"
+    },
+    {
+      "iteration": 283,
+      "timestamp": "2026-02-11T19:53:05.009910",
+      "counts": {
+        "total": 9749,
+        "completed": 4880,
+        "errors": 182
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_283.json"
+    },
+    {
+      "iteration": 284,
+      "timestamp": "2026-02-11T19:53:16.997475",
+      "counts": {
+        "total": 9749,
+        "completed": 4887,
+        "errors": 184
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_284.json"
+    },
+    {
+      "iteration": 285,
+      "timestamp": "2026-02-11T19:53:29.832605",
+      "counts": {
+        "total": 9749,
+        "completed": 4899,
+        "errors": 185
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_285.json"
+    },
+    {
+      "iteration": 286,
+      "timestamp": "2026-02-11T19:53:42.194838",
+      "counts": {
+        "total": 9749,
+        "completed": 4909,
+        "errors": 185
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_286.json"
+    },
+    {
+      "iteration": 287,
+      "timestamp": "2026-02-11T19:53:53.851383",
+      "counts": {
+        "total": 9749,
+        "completed": 4919,
+        "errors": 185
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_287.json"
+    },
+    {
+      "iteration": 288,
+      "timestamp": "2026-02-11T19:54:06.320878",
+      "counts": {
+        "total": 9749,
+        "completed": 4928,
+        "errors": 185
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_288.json"
+    },
+    {
+      "iteration": 289,
+      "timestamp": "2026-02-11T19:54:17.793454",
+      "counts": {
+        "total": 9749,
+        "completed": 4936,
+        "errors": 187
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_289.json"
+    },
+    {
+      "iteration": 290,
+      "timestamp": "2026-02-11T19:54:29.618603",
+      "counts": {
+        "total": 9749,
+        "completed": 4944,
+        "errors": 190
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_290.json"
+    },
+    {
+      "iteration": 291,
+      "timestamp": "2026-02-11T19:54:41.028412",
+      "counts": {
+        "total": 9749,
+        "completed": 4953,
+        "errors": 191
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_291.json"
+    },
+    {
+      "iteration": 292,
+      "timestamp": "2026-02-11T19:54:53.184595",
+      "counts": {
+        "total": 9749,
+        "completed": 4959,
+        "errors": 195
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_292.json"
+    },
+    {
+      "iteration": 293,
+      "timestamp": "2026-02-11T19:55:05.061842",
+      "counts": {
+        "total": 9749,
+        "completed": 4968,
+        "errors": 197
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_293.json"
+    },
+    {
+      "iteration": 294,
+      "timestamp": "2026-02-11T19:55:16.851715",
+      "counts": {
+        "total": 9749,
+        "completed": 4978,
+        "errors": 198
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_294.json"
+    },
+    {
+      "iteration": 295,
+      "timestamp": "2026-02-11T19:55:28.348854",
+      "counts": {
+        "total": 9749,
+        "completed": 4986,
+        "errors": 199
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_295.json"
+    },
+    {
+      "iteration": 296,
+      "timestamp": "2026-02-11T19:55:40.132884",
+      "counts": {
+        "total": 9749,
+        "completed": 4990,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_296.json"
+    },
+    {
+      "iteration": 297,
+      "timestamp": "2026-02-11T19:55:51.593056",
+      "counts": {
+        "total": 9749,
+        "completed": 5001,
+        "errors": 199
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_297.json"
+    },
+    {
+      "iteration": 298,
+      "timestamp": "2026-02-11T19:56:03.000346",
+      "counts": {
+        "total": 9749,
+        "completed": 5009,
+        "errors": 193
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_298.json"
+    },
+    {
+      "iteration": 299,
+      "timestamp": "2026-02-11T19:56:14.419863",
+      "counts": {
+        "total": 9749,
+        "completed": 5022,
+        "errors": 190
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_299.json"
+    },
+    {
+      "iteration": 300,
+      "timestamp": "2026-02-11T19:56:25.851516",
+      "counts": {
+        "total": 9749,
+        "completed": 5030,
+        "errors": 192
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_300.json"
+    },
+    {
+      "iteration": 301,
+      "timestamp": "2026-02-11T19:56:37.175158",
+      "counts": {
+        "total": 9749,
+        "completed": 5039,
+        "errors": 192
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_301.json"
+    },
+    {
+      "iteration": 302,
+      "timestamp": "2026-02-11T19:56:48.528993",
+      "counts": {
+        "total": 9749,
+        "completed": 5050,
+        "errors": 192
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_302.json"
+    },
+    {
+      "iteration": 303,
+      "timestamp": "2026-02-11T19:56:59.874853",
+      "counts": {
+        "total": 9749,
+        "completed": 5057,
+        "errors": 194
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_303.json"
+    },
+    {
+      "iteration": 304,
+      "timestamp": "2026-02-11T19:57:11.570455",
+      "counts": {
+        "total": 9749,
+        "completed": 5067,
+        "errors": 194
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_304.json"
+    },
+    {
+      "iteration": 305,
+      "timestamp": "2026-02-11T19:57:23.274750",
+      "counts": {
+        "total": 9749,
+        "completed": 5077,
+        "errors": 196
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_305.json"
+    },
+    {
+      "iteration": 306,
+      "timestamp": "2026-02-11T19:57:34.659437",
+      "counts": {
+        "total": 9749,
+        "completed": 5085,
+        "errors": 197
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_306.json"
+    },
+    {
+      "iteration": 307,
+      "timestamp": "2026-02-11T19:57:46.157645",
+      "counts": {
+        "total": 9749,
+        "completed": 5096,
+        "errors": 197
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_307.json"
+    },
+    {
+      "iteration": 308,
+      "timestamp": "2026-02-11T19:57:57.810667",
+      "counts": {
+        "total": 9749,
+        "completed": 5104,
+        "errors": 199
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_308.json"
+    },
+    {
+      "iteration": 309,
+      "timestamp": "2026-02-11T19:58:10.796574",
+      "counts": {
+        "total": 9749,
+        "completed": 5111,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_309.json"
+    },
+    {
+      "iteration": 310,
+      "timestamp": "2026-02-11T19:58:22.670752",
+      "counts": {
+        "total": 9749,
+        "completed": 5121,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_310.json"
+    },
+    {
+      "iteration": 311,
+      "timestamp": "2026-02-11T19:58:34.164298",
+      "counts": {
+        "total": 9749,
+        "completed": 5130,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_311.json"
+    },
+    {
+      "iteration": 312,
+      "timestamp": "2026-02-11T19:58:45.804140",
+      "counts": {
+        "total": 9749,
+        "completed": 5137,
+        "errors": 205
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_312.json"
+    },
+    {
+      "iteration": 313,
+      "timestamp": "2026-02-11T19:58:57.873447",
+      "counts": {
+        "total": 9749,
+        "completed": 5147,
+        "errors": 205
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_313.json"
+    },
+    {
+      "iteration": 314,
+      "timestamp": "2026-02-11T19:59:09.478863",
+      "counts": {
+        "total": 9749,
+        "completed": 5152,
+        "errors": 207
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_314.json"
+    },
+    {
+      "iteration": 315,
+      "timestamp": "2026-02-11T19:59:21.259421",
+      "counts": {
+        "total": 9749,
+        "completed": 5160,
+        "errors": 210
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_315.json"
+    },
+    {
+      "iteration": 316,
+      "timestamp": "2026-02-11T19:59:33.329715",
+      "counts": {
+        "total": 9749,
+        "completed": 5168,
+        "errors": 209
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_316.json"
+    },
+    {
+      "iteration": 317,
+      "timestamp": "2026-02-11T19:59:45.433162",
+      "counts": {
+        "total": 9749,
+        "completed": 5176,
+        "errors": 207
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_317.json"
+    },
+    {
+      "iteration": 318,
+      "timestamp": "2026-02-11T19:59:57.230104",
+      "counts": {
+        "total": 9749,
+        "completed": 5184,
+        "errors": 205
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_318.json"
+    },
+    {
+      "iteration": 319,
+      "timestamp": "2026-02-11T20:00:08.904625",
+      "counts": {
+        "total": 9749,
+        "completed": 5194,
+        "errors": 206
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_319.json"
+    },
+    {
+      "iteration": 320,
+      "timestamp": "2026-02-11T20:00:20.689739",
+      "counts": {
+        "total": 9749,
+        "completed": 5201,
+        "errors": 209
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_320.json"
+    },
+    {
+      "iteration": 321,
+      "timestamp": "2026-02-11T20:00:32.312545",
+      "counts": {
+        "total": 9749,
+        "completed": 5210,
+        "errors": 210
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_321.json"
+    },
+    {
+      "iteration": 322,
+      "timestamp": "2026-02-11T20:00:43.973467",
+      "counts": {
+        "total": 9749,
+        "completed": 5217,
+        "errors": 213
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_322.json"
+    },
+    {
+      "iteration": 323,
+      "timestamp": "2026-02-11T20:00:55.519142",
+      "counts": {
+        "total": 9749,
+        "completed": 5227,
+        "errors": 214
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_323.json"
+    },
+    {
+      "iteration": 324,
+      "timestamp": "2026-02-11T20:01:06.929736",
+      "counts": {
+        "total": 9749,
+        "completed": 5237,
+        "errors": 214
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_324.json"
+    },
+    {
+      "iteration": 325,
+      "timestamp": "2026-02-11T20:01:18.399440",
+      "counts": {
+        "total": 9749,
+        "completed": 5244,
+        "errors": 214
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_325.json"
+    },
+    {
+      "iteration": 326,
+      "timestamp": "2026-02-11T20:01:29.997235",
+      "counts": {
+        "total": 9749,
+        "completed": 5253,
+        "errors": 212
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_326.json"
+    },
+    {
+      "iteration": 327,
+      "timestamp": "2026-02-11T20:01:41.647905",
+      "counts": {
+        "total": 9749,
+        "completed": 5260,
+        "errors": 212
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_327.json"
+    },
+    {
+      "iteration": 328,
+      "timestamp": "2026-02-11T20:01:53.521168",
+      "counts": {
+        "total": 9749,
+        "completed": 5268,
+        "errors": 215
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_328.json"
+    },
+    {
+      "iteration": 329,
+      "timestamp": "2026-02-11T20:02:05.038269",
+      "counts": {
+        "total": 9749,
+        "completed": 5277,
+        "errors": 218
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_329.json"
+    },
+    {
+      "iteration": 330,
+      "timestamp": "2026-02-11T20:02:16.365841",
+      "counts": {
+        "total": 9749,
+        "completed": 5284,
+        "errors": 216
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_330.json"
+    },
+    {
+      "iteration": 331,
+      "timestamp": "2026-02-11T20:02:27.981370",
+      "counts": {
+        "total": 9749,
+        "completed": 5291,
+        "errors": 217
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_331.json"
+    },
+    {
+      "iteration": 332,
+      "timestamp": "2026-02-11T20:02:39.405282",
+      "counts": {
+        "total": 9749,
+        "completed": 5297,
+        "errors": 219
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_332.json"
+    },
+    {
+      "iteration": 333,
+      "timestamp": "2026-02-11T20:02:50.842932",
+      "counts": {
+        "total": 9749,
+        "completed": 5304,
+        "errors": 220
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_333.json"
+    },
+    {
+      "iteration": 334,
+      "timestamp": "2026-02-11T20:03:02.898064",
+      "counts": {
+        "total": 9749,
+        "completed": 5315,
+        "errors": 221
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_334.json"
+    },
+    {
+      "iteration": 335,
+      "timestamp": "2026-02-11T20:03:14.375102",
+      "counts": {
+        "total": 9749,
+        "completed": 5321,
+        "errors": 225
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_335.json"
+    },
+    {
+      "iteration": 336,
+      "timestamp": "2026-02-11T20:03:26.290888",
+      "counts": {
+        "total": 9749,
+        "completed": 5328,
+        "errors": 221
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_336.json"
+    },
+    {
+      "iteration": 337,
+      "timestamp": "2026-02-11T20:03:37.944513",
+      "counts": {
+        "total": 9749,
+        "completed": 5335,
+        "errors": 215
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_337.json"
+    },
+    {
+      "iteration": 338,
+      "timestamp": "2026-02-11T20:03:49.400860",
+      "counts": {
+        "total": 9749,
+        "completed": 5347,
+        "errors": 214
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_338.json"
+    },
+    {
+      "iteration": 339,
+      "timestamp": "2026-02-11T20:04:01.707633",
+      "counts": {
+        "total": 9749,
+        "completed": 5361,
+        "errors": 208
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_339.json"
+    },
+    {
+      "iteration": 340,
+      "timestamp": "2026-02-11T20:04:13.438814",
+      "counts": {
+        "total": 9749,
+        "completed": 5366,
+        "errors": 211
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_340.json"
+    },
+    {
+      "iteration": 341,
+      "timestamp": "2026-02-11T20:04:24.863495",
+      "counts": {
+        "total": 9749,
+        "completed": 5376,
+        "errors": 208
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_341.json"
+    },
+    {
+      "iteration": 342,
+      "timestamp": "2026-02-11T20:04:36.662611",
+      "counts": {
+        "total": 9749,
+        "completed": 5386,
+        "errors": 208
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_342.json"
+    },
+    {
+      "iteration": 343,
+      "timestamp": "2026-02-11T20:04:48.286532",
+      "counts": {
+        "total": 9749,
+        "completed": 5392,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_343.json"
+    },
+    {
+      "iteration": 344,
+      "timestamp": "2026-02-11T20:04:59.967002",
+      "counts": {
+        "total": 9749,
+        "completed": 5400,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_344.json"
+    },
+    {
+      "iteration": 345,
+      "timestamp": "2026-02-11T20:05:11.839756",
+      "counts": {
+        "total": 9749,
+        "completed": 5405,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_345.json"
+    },
+    {
+      "iteration": 346,
+      "timestamp": "2026-02-11T20:05:23.457991",
+      "counts": {
+        "total": 9749,
+        "completed": 5415,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_346.json"
+    },
+    {
+      "iteration": 347,
+      "timestamp": "2026-02-11T20:05:35.562289",
+      "counts": {
+        "total": 9749,
+        "completed": 5422,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_347.json"
+    },
+    {
+      "iteration": 348,
+      "timestamp": "2026-02-11T20:05:47.817253",
+      "counts": {
+        "total": 9749,
+        "completed": 5430,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_348.json"
+    },
+    {
+      "iteration": 349,
+      "timestamp": "2026-02-11T20:05:59.502370",
+      "counts": {
+        "total": 9749,
+        "completed": 5442,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_349.json"
+    },
+    {
+      "iteration": 350,
+      "timestamp": "2026-02-11T20:06:11.082426",
+      "counts": {
+        "total": 9749,
+        "completed": 5449,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_350.json"
+    },
+    {
+      "iteration": 351,
+      "timestamp": "2026-02-11T20:06:22.807403",
+      "counts": {
+        "total": 9749,
+        "completed": 5459,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_351.json"
+    },
+    {
+      "iteration": 352,
+      "timestamp": "2026-02-11T20:06:34.605312",
+      "counts": {
+        "total": 9749,
+        "completed": 5466,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_352.json"
+    },
+    {
+      "iteration": 353,
+      "timestamp": "2026-02-11T20:06:46.437826",
+      "counts": {
+        "total": 9749,
+        "completed": 5474,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_353.json"
+    },
+    {
+      "iteration": 354,
+      "timestamp": "2026-02-11T20:06:58.277434",
+      "counts": {
+        "total": 9749,
+        "completed": 5479,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_354.json"
+    },
+    {
+      "iteration": 355,
+      "timestamp": "2026-02-11T20:07:10.252108",
+      "counts": {
+        "total": 9749,
+        "completed": 5484,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_355.json"
+    },
+    {
+      "iteration": 356,
+      "timestamp": "2026-02-11T20:07:21.951383",
+      "counts": {
+        "total": 9749,
+        "completed": 5493,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_356.json"
+    },
+    {
+      "iteration": 357,
+      "timestamp": "2026-02-11T20:07:33.731697",
+      "counts": {
+        "total": 9749,
+        "completed": 5502,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_357.json"
+    },
+    {
+      "iteration": 358,
+      "timestamp": "2026-02-11T20:07:45.436147",
+      "counts": {
+        "total": 9749,
+        "completed": 5506,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_358.json"
+    },
+    {
+      "iteration": 359,
+      "timestamp": "2026-02-11T20:07:57.135045",
+      "counts": {
+        "total": 9749,
+        "completed": 5514,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_359.json"
+    },
+    {
+      "iteration": 360,
+      "timestamp": "2026-02-11T20:08:08.728306",
+      "counts": {
+        "total": 9749,
+        "completed": 5523,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_360.json"
+    },
+    {
+      "iteration": 361,
+      "timestamp": "2026-02-11T20:08:20.557787",
+      "counts": {
+        "total": 9749,
+        "completed": 5528,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_361.json"
+    },
+    {
+      "iteration": 362,
+      "timestamp": "2026-02-11T20:08:32.280901",
+      "counts": {
+        "total": 9749,
+        "completed": 5532,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_362.json"
+    },
+    {
+      "iteration": 363,
+      "timestamp": "2026-02-11T20:08:43.708281",
+      "counts": {
+        "total": 9749,
+        "completed": 5540,
+        "errors": 203
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_363.json"
+    },
+    {
+      "iteration": 364,
+      "timestamp": "2026-02-11T20:08:55.626706",
+      "counts": {
+        "total": 9749,
+        "completed": 5547,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_364.json"
+    },
+    {
+      "iteration": 365,
+      "timestamp": "2026-02-11T20:09:07.376077",
+      "counts": {
+        "total": 9749,
+        "completed": 5552,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_365.json"
+    },
+    {
+      "iteration": 366,
+      "timestamp": "2026-02-11T20:09:19.018637",
+      "counts": {
+        "total": 9749,
+        "completed": 5561,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_366.json"
+    },
+    {
+      "iteration": 367,
+      "timestamp": "2026-02-11T20:09:30.802508",
+      "counts": {
+        "total": 9749,
+        "completed": 5571,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_367.json"
+    },
+    {
+      "iteration": 368,
+      "timestamp": "2026-02-11T20:09:42.940284",
+      "counts": {
+        "total": 9749,
+        "completed": 5577,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_368.json"
+    },
+    {
+      "iteration": 369,
+      "timestamp": "2026-02-11T20:09:54.804930",
+      "counts": {
+        "total": 9749,
+        "completed": 5580,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_369.json"
+    },
+    {
+      "iteration": 370,
+      "timestamp": "2026-02-11T20:10:06.352202",
+      "counts": {
+        "total": 9749,
+        "completed": 5588,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_370.json"
+    },
+    {
+      "iteration": 371,
+      "timestamp": "2026-02-11T20:10:18.466283",
+      "counts": {
+        "total": 9749,
+        "completed": 5594,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_371.json"
+    },
+    {
+      "iteration": 372,
+      "timestamp": "2026-02-11T20:10:30.020000",
+      "counts": {
+        "total": 9749,
+        "completed": 5597,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_372.json"
+    },
+    {
+      "iteration": 373,
+      "timestamp": "2026-02-11T20:10:41.714825",
+      "counts": {
+        "total": 9749,
+        "completed": 5603,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_373.json"
+    },
+    {
+      "iteration": 374,
+      "timestamp": "2026-02-11T20:10:53.254725",
+      "counts": {
+        "total": 9749,
+        "completed": 5612,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_374.json"
+    },
+    {
+      "iteration": 375,
+      "timestamp": "2026-02-11T20:11:04.760320",
+      "counts": {
+        "total": 9749,
+        "completed": 5620,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_375.json"
+    },
+    {
+      "iteration": 376,
+      "timestamp": "2026-02-11T20:11:16.644102",
+      "counts": {
+        "total": 9749,
+        "completed": 5629,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_376.json"
+    },
+    {
+      "iteration": 377,
+      "timestamp": "2026-02-11T20:11:28.595677",
+      "counts": {
+        "total": 9749,
+        "completed": 5638,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_377.json"
+    },
+    {
+      "iteration": 378,
+      "timestamp": "2026-02-11T20:11:40.064345",
+      "counts": {
+        "total": 9749,
+        "completed": 5648,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_378.json"
+    },
+    {
+      "iteration": 379,
+      "timestamp": "2026-02-11T20:11:51.602260",
+      "counts": {
+        "total": 9749,
+        "completed": 5656,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_379.json"
+    },
+    {
+      "iteration": 380,
+      "timestamp": "2026-02-11T20:12:03.290312",
+      "counts": {
+        "total": 9749,
+        "completed": 5662,
+        "errors": 200
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_380.json"
+    },
+    {
+      "iteration": 381,
+      "timestamp": "2026-02-11T20:12:15.030222",
+      "counts": {
+        "total": 9749,
+        "completed": 5673,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_381.json"
+    },
+    {
+      "iteration": 382,
+      "timestamp": "2026-02-11T20:12:26.762843",
+      "counts": {
+        "total": 9749,
+        "completed": 5683,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_382.json"
+    },
+    {
+      "iteration": 383,
+      "timestamp": "2026-02-11T20:12:38.626165",
+      "counts": {
+        "total": 9749,
+        "completed": 5692,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_383.json"
+    },
+    {
+      "iteration": 384,
+      "timestamp": "2026-02-11T20:12:50.340361",
+      "counts": {
+        "total": 9749,
+        "completed": 5700,
+        "errors": 201
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_384.json"
+    },
+    {
+      "iteration": 385,
+      "timestamp": "2026-02-11T20:13:01.865558",
+      "counts": {
+        "total": 9749,
+        "completed": 5706,
+        "errors": 202
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_385.json"
+    },
+    {
+      "iteration": 386,
+      "timestamp": "2026-02-11T20:13:13.429051",
+      "counts": {
+        "total": 9749,
+        "completed": 5716,
+        "errors": 203
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_386.json"
+    },
+    {
+      "iteration": 387,
+      "timestamp": "2026-02-11T20:13:24.790989",
+      "counts": {
+        "total": 9749,
+        "completed": 5725,
+        "errors": 205
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_387.json"
+    },
+    {
+      "iteration": 388,
+      "timestamp": "2026-02-11T20:13:36.351850",
+      "counts": {
+        "total": 9749,
+        "completed": 5735,
+        "errors": 206
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_388.json"
+    },
+    {
+      "iteration": 389,
+      "timestamp": "2026-02-11T20:13:47.711339",
+      "counts": {
+        "total": 9749,
+        "completed": 5742,
+        "errors": 210
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_389.json"
+    },
+    {
+      "iteration": 390,
+      "timestamp": "2026-02-11T20:13:59.589791",
+      "counts": {
+        "total": 9749,
+        "completed": 5752,
+        "errors": 211
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_390.json"
+    },
+    {
+      "iteration": 391,
+      "timestamp": "2026-02-11T20:14:11.020426",
+      "counts": {
+        "total": 9749,
+        "completed": 5759,
+        "errors": 213
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_391.json"
+    },
+    {
+      "iteration": 392,
+      "timestamp": "2026-02-11T20:14:22.620835",
+      "counts": {
+        "total": 9749,
+        "completed": 5766,
+        "errors": 218
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_392.json"
+    },
+    {
+      "iteration": 393,
+      "timestamp": "2026-02-11T20:14:34.644062",
+      "counts": {
+        "total": 9749,
+        "completed": 5774,
+        "errors": 219
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_393.json"
+    },
+    {
+      "iteration": 394,
+      "timestamp": "2026-02-11T20:14:46.010884",
+      "counts": {
+        "total": 9749,
+        "completed": 5780,
+        "errors": 220
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_394.json"
+    },
+    {
+      "iteration": 395,
+      "timestamp": "2026-02-11T20:14:57.553979",
+      "counts": {
+        "total": 9749,
+        "completed": 5788,
+        "errors": 220
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_395.json"
+    },
+    {
+      "iteration": 396,
+      "timestamp": "2026-02-11T20:15:09.174625",
+      "counts": {
+        "total": 9749,
+        "completed": 5795,
+        "errors": 221
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_396.json"
+    },
+    {
+      "iteration": 397,
+      "timestamp": "2026-02-11T20:15:21.383029",
+      "counts": {
+        "total": 9749,
+        "completed": 5804,
+        "errors": 224
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_397.json"
+    },
+    {
+      "iteration": 398,
+      "timestamp": "2026-02-11T20:15:33.703088",
+      "counts": {
+        "total": 9749,
+        "completed": 5813,
+        "errors": 226
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_398.json"
+    },
+    {
+      "iteration": 399,
+      "timestamp": "2026-02-11T20:15:45.144824",
+      "counts": {
+        "total": 9749,
+        "completed": 5821,
+        "errors": 228
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_399.json"
+    },
+    {
+      "iteration": 400,
+      "timestamp": "2026-02-11T20:15:56.787870",
+      "counts": {
+        "total": 9749,
+        "completed": 5833,
+        "errors": 229
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_400.json"
+    },
+    {
+      "iteration": 401,
+      "timestamp": "2026-02-11T20:16:08.203814",
+      "counts": {
+        "total": 9749,
+        "completed": 5840,
+        "errors": 231
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_401.json"
+    },
+    {
+      "iteration": 402,
+      "timestamp": "2026-02-11T20:16:19.753927",
+      "counts": {
+        "total": 9749,
+        "completed": 5852,
+        "errors": 232
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_402.json"
+    },
+    {
+      "iteration": 403,
+      "timestamp": "2026-02-11T20:16:31.239101",
+      "counts": {
+        "total": 9749,
+        "completed": 5858,
+        "errors": 234
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_403.json"
+    },
+    {
+      "iteration": 404,
+      "timestamp": "2026-02-11T20:16:43.392110",
+      "counts": {
+        "total": 9749,
+        "completed": 5867,
+        "errors": 234
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_404.json"
+    },
+    {
+      "iteration": 405,
+      "timestamp": "2026-02-11T20:16:55.602386",
+      "counts": {
+        "total": 9749,
+        "completed": 5875,
+        "errors": 234
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_405.json"
+    },
+    {
+      "iteration": 406,
+      "timestamp": "2026-02-11T20:17:07.138395",
+      "counts": {
+        "total": 9749,
+        "completed": 5886,
+        "errors": 236
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_406.json"
+    },
+    {
+      "iteration": 407,
+      "timestamp": "2026-02-11T20:17:18.600057",
+      "counts": {
+        "total": 9749,
+        "completed": 5894,
+        "errors": 237
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_407.json"
+    },
+    {
+      "iteration": 408,
+      "timestamp": "2026-02-11T20:17:31.118027",
+      "counts": {
+        "total": 9749,
+        "completed": 5904,
+        "errors": 238
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_408.json"
+    },
+    {
+      "iteration": 409,
+      "timestamp": "2026-02-11T20:17:43.096607",
+      "counts": {
+        "total": 9749,
+        "completed": 5913,
+        "errors": 239
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_409.json"
+    },
+    {
+      "iteration": 410,
+      "timestamp": "2026-02-11T20:17:54.933311",
+      "counts": {
+        "total": 9749,
+        "completed": 5922,
+        "errors": 241
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_410.json"
+    },
+    {
+      "iteration": 411,
+      "timestamp": "2026-02-11T20:18:06.390314",
+      "counts": {
+        "total": 9749,
+        "completed": 5931,
+        "errors": 241
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_411.json"
+    },
+    {
+      "iteration": 412,
+      "timestamp": "2026-02-11T20:18:18.079163",
+      "counts": {
+        "total": 9749,
+        "completed": 5938,
+        "errors": 245
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_412.json"
+    },
+    {
+      "iteration": 413,
+      "timestamp": "2026-02-11T20:18:29.790160",
+      "counts": {
+        "total": 9749,
+        "completed": 5944,
+        "errors": 246
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_413.json"
+    },
+    {
+      "iteration": 414,
+      "timestamp": "2026-02-11T20:18:41.704355",
+      "counts": {
+        "total": 9749,
+        "completed": 5951,
+        "errors": 246
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_414.json"
+    },
+    {
+      "iteration": 415,
+      "timestamp": "2026-02-11T20:18:52.968519",
+      "counts": {
+        "total": 9749,
+        "completed": 5959,
+        "errors": 248
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_415.json"
+    },
+    {
+      "iteration": 416,
+      "timestamp": "2026-02-11T20:19:04.434343",
+      "counts": {
+        "total": 9749,
+        "completed": 5967,
+        "errors": 250
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_416.json"
+    },
+    {
+      "iteration": 417,
+      "timestamp": "2026-02-11T20:19:15.912835",
+      "counts": {
+        "total": 9749,
+        "completed": 5970,
+        "errors": 255
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_417.json"
+    },
+    {
+      "iteration": 418,
+      "timestamp": "2026-02-11T20:19:27.322437",
+      "counts": {
+        "total": 9749,
+        "completed": 5980,
+        "errors": 257
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_418.json"
+    },
+    {
+      "iteration": 419,
+      "timestamp": "2026-02-11T20:19:38.945773",
+      "counts": {
+        "total": 9749,
+        "completed": 5988,
+        "errors": 258
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_419.json"
+    },
+    {
+      "iteration": 420,
+      "timestamp": "2026-02-11T20:19:50.710769",
+      "counts": {
+        "total": 9749,
+        "completed": 5997,
+        "errors": 259
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_420.json"
+    },
+    {
+      "iteration": 421,
+      "timestamp": "2026-02-11T20:20:02.417938",
+      "counts": {
+        "total": 9749,
+        "completed": 6004,
+        "errors": 262
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_421.json"
+    },
+    {
+      "iteration": 422,
+      "timestamp": "2026-02-11T20:20:14.162190",
+      "counts": {
+        "total": 9749,
+        "completed": 6013,
+        "errors": 263
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_422.json"
+    },
+    {
+      "iteration": 423,
+      "timestamp": "2026-02-11T20:20:25.988847",
+      "counts": {
+        "total": 9749,
+        "completed": 6020,
+        "errors": 265
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_423.json"
+    },
+    {
+      "iteration": 424,
+      "timestamp": "2026-02-11T20:20:37.978908",
+      "counts": {
+        "total": 9749,
+        "completed": 6028,
+        "errors": 265
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_424.json"
+    },
+    {
+      "iteration": 425,
+      "timestamp": "2026-02-11T20:20:49.911215",
+      "counts": {
+        "total": 9749,
+        "completed": 6040,
+        "errors": 265
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_425.json"
+    },
+    {
+      "iteration": 426,
+      "timestamp": "2026-02-11T20:21:01.597483",
+      "counts": {
+        "total": 9749,
+        "completed": 6048,
+        "errors": 266
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_426.json"
+    },
+    {
+      "iteration": 427,
+      "timestamp": "2026-02-11T20:21:13.472242",
+      "counts": {
+        "total": 9749,
+        "completed": 6055,
+        "errors": 268
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_427.json"
+    },
+    {
+      "iteration": 428,
+      "timestamp": "2026-02-11T20:21:25.241724",
+      "counts": {
+        "total": 9749,
+        "completed": 6065,
+        "errors": 270
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_428.json"
+    },
+    {
+      "iteration": 429,
+      "timestamp": "2026-02-11T20:21:37.339081",
+      "counts": {
+        "total": 9749,
+        "completed": 6071,
+        "errors": 274
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_429.json"
+    },
+    {
+      "iteration": 430,
+      "timestamp": "2026-02-11T20:21:49.121517",
+      "counts": {
+        "total": 9749,
+        "completed": 6077,
+        "errors": 279
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_430.json"
+    },
+    {
+      "iteration": 431,
+      "timestamp": "2026-02-11T20:22:00.827985",
+      "counts": {
+        "total": 9749,
+        "completed": 6086,
+        "errors": 280
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_431.json"
+    },
+    {
+      "iteration": 432,
+      "timestamp": "2026-02-11T20:22:12.543876",
+      "counts": {
+        "total": 9749,
+        "completed": 6096,
+        "errors": 281
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_432.json"
+    },
+    {
+      "iteration": 433,
+      "timestamp": "2026-02-11T20:22:24.349388",
+      "counts": {
+        "total": 9749,
+        "completed": 6105,
+        "errors": 281
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_433.json"
+    },
+    {
+      "iteration": 434,
+      "timestamp": "2026-02-11T20:22:36.667068",
+      "counts": {
+        "total": 9749,
+        "completed": 6115,
+        "errors": 281
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_434.json"
+    },
+    {
+      "iteration": 435,
+      "timestamp": "2026-02-11T20:22:48.526969",
+      "counts": {
+        "total": 9749,
+        "completed": 6125,
+        "errors": 281
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_435.json"
+    },
+    {
+      "iteration": 436,
+      "timestamp": "2026-02-11T20:23:00.418864",
+      "counts": {
+        "total": 9749,
+        "completed": 6134,
+        "errors": 283
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_436.json"
+    },
+    {
+      "iteration": 437,
+      "timestamp": "2026-02-11T20:23:12.600727",
+      "counts": {
+        "total": 9749,
+        "completed": 6143,
+        "errors": 285
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_437.json"
+    },
+    {
+      "iteration": 438,
+      "timestamp": "2026-02-11T20:23:24.408871",
+      "counts": {
+        "total": 9749,
+        "completed": 6153,
+        "errors": 286
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_438.json"
+    },
+    {
+      "iteration": 439,
+      "timestamp": "2026-02-11T20:23:36.273119",
+      "counts": {
+        "total": 9749,
+        "completed": 6162,
+        "errors": 288
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_439.json"
+    },
+    {
+      "iteration": 440,
+      "timestamp": "2026-02-11T20:23:48.682271",
+      "counts": {
+        "total": 9749,
+        "completed": 6171,
+        "errors": 290
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_440.json"
+    },
+    {
+      "iteration": 441,
+      "timestamp": "2026-02-11T20:24:00.404878",
+      "counts": {
+        "total": 9749,
+        "completed": 6181,
+        "errors": 291
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_441.json"
+    },
+    {
+      "iteration": 442,
+      "timestamp": "2026-02-11T20:24:12.240347",
+      "counts": {
+        "total": 9749,
+        "completed": 6190,
+        "errors": 292
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_442.json"
+    },
+    {
+      "iteration": 443,
+      "timestamp": "2026-02-11T20:24:24.126561",
+      "counts": {
+        "total": 9749,
+        "completed": 6198,
+        "errors": 292
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_443.json"
+    },
+    {
+      "iteration": 444,
+      "timestamp": "2026-02-11T20:24:36.076996",
+      "counts": {
+        "total": 9749,
+        "completed": 6203,
+        "errors": 296
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_444.json"
+    },
+    {
+      "iteration": 445,
+      "timestamp": "2026-02-11T20:24:47.999618",
+      "counts": {
+        "total": 9749,
+        "completed": 6213,
+        "errors": 299
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_445.json"
+    },
+    {
+      "iteration": 446,
+      "timestamp": "2026-02-11T20:24:59.637295",
+      "counts": {
+        "total": 9749,
+        "completed": 6222,
+        "errors": 300
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_446.json"
+    },
+    {
+      "iteration": 447,
+      "timestamp": "2026-02-11T20:25:11.339820",
+      "counts": {
+        "total": 9749,
+        "completed": 6227,
+        "errors": 306
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_447.json"
+    },
+    {
+      "iteration": 448,
+      "timestamp": "2026-02-11T20:25:22.961900",
+      "counts": {
+        "total": 9749,
+        "completed": 6238,
+        "errors": 306
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_448.json"
+    },
+    {
+      "iteration": 449,
+      "timestamp": "2026-02-11T20:25:34.680831",
+      "counts": {
+        "total": 9749,
+        "completed": 6246,
+        "errors": 309
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_449.json"
+    },
+    {
+      "iteration": 450,
+      "timestamp": "2026-02-11T20:25:46.359593",
+      "counts": {
+        "total": 9749,
+        "completed": 6255,
+        "errors": 310
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_450.json"
+    },
+    {
+      "iteration": 451,
+      "timestamp": "2026-02-11T20:25:58.260524",
+      "counts": {
+        "total": 9749,
+        "completed": 6262,
+        "errors": 311
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_451.json"
+    },
+    {
+      "iteration": 452,
+      "timestamp": "2026-02-11T20:26:10.134320",
+      "counts": {
+        "total": 9749,
+        "completed": 6268,
+        "errors": 312
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_452.json"
+    },
+    {
+      "iteration": 453,
+      "timestamp": "2026-02-11T20:26:21.989964",
+      "counts": {
+        "total": 9749,
+        "completed": 6274,
+        "errors": 312
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_453.json"
+    },
+    {
+      "iteration": 454,
+      "timestamp": "2026-02-11T20:26:33.596031",
+      "counts": {
+        "total": 9749,
+        "completed": 6284,
+        "errors": 312
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_454.json"
+    },
+    {
+      "iteration": 455,
+      "timestamp": "2026-02-11T20:26:45.140274",
+      "counts": {
+        "total": 9749,
+        "completed": 6290,
+        "errors": 314
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_455.json"
+    },
+    {
+      "iteration": 456,
+      "timestamp": "2026-02-11T20:26:57.232035",
+      "counts": {
+        "total": 9749,
+        "completed": 6297,
+        "errors": 317
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_456.json"
+    },
+    {
+      "iteration": 457,
+      "timestamp": "2026-02-11T20:27:08.804441",
+      "counts": {
+        "total": 9749,
+        "completed": 6305,
+        "errors": 321
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_457.json"
+    },
+    {
+      "iteration": 458,
+      "timestamp": "2026-02-11T20:27:20.361356",
+      "counts": {
+        "total": 9749,
+        "completed": 6313,
+        "errors": 322
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_458.json"
+    },
+    {
+      "iteration": 459,
+      "timestamp": "2026-02-11T20:27:32.284732",
+      "counts": {
+        "total": 9749,
+        "completed": 6320,
+        "errors": 325
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_459.json"
+    },
+    {
+      "iteration": 460,
+      "timestamp": "2026-02-11T20:27:44.519708",
+      "counts": {
+        "total": 9749,
+        "completed": 6328,
+        "errors": 327
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_460.json"
+    },
+    {
+      "iteration": 461,
+      "timestamp": "2026-02-11T20:27:55.957459",
+      "counts": {
+        "total": 9749,
+        "completed": 6333,
+        "errors": 332
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_461.json"
+    },
+    {
+      "iteration": 462,
+      "timestamp": "2026-02-11T20:28:07.465790",
+      "counts": {
+        "total": 9749,
+        "completed": 6340,
+        "errors": 333
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_462.json"
+    },
+    {
+      "iteration": 463,
+      "timestamp": "2026-02-11T20:28:19.143559",
+      "counts": {
+        "total": 9749,
+        "completed": 6346,
+        "errors": 333
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_463.json"
+    },
+    {
+      "iteration": 464,
+      "timestamp": "2026-02-11T20:28:31.063698",
+      "counts": {
+        "total": 9749,
+        "completed": 6355,
+        "errors": 333
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_464.json"
+    },
+    {
+      "iteration": 465,
+      "timestamp": "2026-02-11T20:28:43.418902",
+      "counts": {
+        "total": 9749,
+        "completed": 6364,
+        "errors": 334
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_465.json"
+    },
+    {
+      "iteration": 466,
+      "timestamp": "2026-02-11T20:28:54.822336",
+      "counts": {
+        "total": 9749,
+        "completed": 6371,
+        "errors": 336
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_466.json"
+    },
+    {
+      "iteration": 467,
+      "timestamp": "2026-02-11T20:29:06.321018",
+      "counts": {
+        "total": 9749,
+        "completed": 6379,
+        "errors": 341
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_467.json"
+    },
+    {
+      "iteration": 468,
+      "timestamp": "2026-02-11T20:29:17.864317",
+      "counts": {
+        "total": 9749,
+        "completed": 6387,
+        "errors": 343
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_468.json"
+    },
+    {
+      "iteration": 469,
+      "timestamp": "2026-02-11T20:29:29.420948",
+      "counts": {
+        "total": 9749,
+        "completed": 6397,
+        "errors": 345
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_469.json"
+    },
+    {
+      "iteration": 470,
+      "timestamp": "2026-02-11T20:29:41.494139",
+      "counts": {
+        "total": 9749,
+        "completed": 6405,
+        "errors": 347
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_470.json"
+    },
+    {
+      "iteration": 471,
+      "timestamp": "2026-02-11T20:29:53.619653",
+      "counts": {
+        "total": 9749,
+        "completed": 6412,
+        "errors": 349
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_471.json"
+    },
+    {
+      "iteration": 472,
+      "timestamp": "2026-02-11T20:30:05.181606",
+      "counts": {
+        "total": 9749,
+        "completed": 6420,
+        "errors": 350
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_472.json"
+    },
+    {
+      "iteration": 473,
+      "timestamp": "2026-02-11T20:30:16.752887",
+      "counts": {
+        "total": 9749,
+        "completed": 6427,
+        "errors": 350
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_473.json"
+    },
+    {
+      "iteration": 474,
+      "timestamp": "2026-02-11T20:30:28.828882",
+      "counts": {
+        "total": 9749,
+        "completed": 6434,
+        "errors": 352
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_474.json"
+    },
+    {
+      "iteration": 475,
+      "timestamp": "2026-02-11T20:30:40.899141",
+      "counts": {
+        "total": 9749,
+        "completed": 6443,
+        "errors": 354
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_475.json"
+    },
+    {
+      "iteration": 476,
+      "timestamp": "2026-02-11T20:30:52.951835",
+      "counts": {
+        "total": 9749,
+        "completed": 6455,
+        "errors": 354
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_476.json"
+    },
+    {
+      "iteration": 477,
+      "timestamp": "2026-02-11T20:31:04.430757",
+      "counts": {
+        "total": 9749,
+        "completed": 6464,
+        "errors": 355
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_477.json"
+    },
+    {
+      "iteration": 478,
+      "timestamp": "2026-02-11T20:31:16.682696",
+      "counts": {
+        "total": 9749,
+        "completed": 6470,
+        "errors": 359
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_478.json"
+    },
+    {
+      "iteration": 479,
+      "timestamp": "2026-02-11T20:31:28.191091",
+      "counts": {
+        "total": 9749,
+        "completed": 6476,
+        "errors": 364
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_479.json"
+    },
+    {
+      "iteration": 480,
+      "timestamp": "2026-02-11T20:31:39.784352",
+      "counts": {
+        "total": 9749,
+        "completed": 6484,
+        "errors": 366
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_480.json"
+    },
+    {
+      "iteration": 481,
+      "timestamp": "2026-02-11T20:31:51.211422",
+      "counts": {
+        "total": 9749,
+        "completed": 6490,
+        "errors": 369
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_481.json"
+    },
+    {
+      "iteration": 482,
+      "timestamp": "2026-02-11T20:32:02.675072",
+      "counts": {
+        "total": 9749,
+        "completed": 6499,
+        "errors": 369
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_482.json"
+    },
+    {
+      "iteration": 483,
+      "timestamp": "2026-02-11T20:32:14.228019",
+      "counts": {
+        "total": 9749,
+        "completed": 6507,
+        "errors": 369
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_483.json"
+    },
+    {
+      "iteration": 484,
+      "timestamp": "2026-02-11T20:32:25.672465",
+      "counts": {
+        "total": 9749,
+        "completed": 6516,
+        "errors": 370
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_484.json"
+    },
+    {
+      "iteration": 485,
+      "timestamp": "2026-02-11T20:32:37.484742",
+      "counts": {
+        "total": 9749,
+        "completed": 6523,
+        "errors": 373
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_485.json"
+    },
+    {
+      "iteration": 486,
+      "timestamp": "2026-02-11T20:32:48.934622",
+      "counts": {
+        "total": 9749,
+        "completed": 6533,
+        "errors": 374
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_486.json"
+    },
+    {
+      "iteration": 487,
+      "timestamp": "2026-02-11T20:33:00.561450",
+      "counts": {
+        "total": 9749,
+        "completed": 6540,
+        "errors": 377
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_487.json"
+    },
+    {
+      "iteration": 488,
+      "timestamp": "2026-02-11T20:33:12.080263",
+      "counts": {
+        "total": 9749,
+        "completed": 6545,
+        "errors": 382
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_488.json"
+    },
+    {
+      "iteration": 489,
+      "timestamp": "2026-02-11T20:33:23.807464",
+      "counts": {
+        "total": 9749,
+        "completed": 6553,
+        "errors": 384
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_489.json"
+    },
+    {
+      "iteration": 490,
+      "timestamp": "2026-02-11T20:33:35.797904",
+      "counts": {
+        "total": 9749,
+        "completed": 6563,
+        "errors": 384
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_490.json"
+    },
+    {
+      "iteration": 491,
+      "timestamp": "2026-02-11T20:33:47.246336",
+      "counts": {
+        "total": 9749,
+        "completed": 6569,
+        "errors": 386
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_491.json"
+    },
+    {
+      "iteration": 492,
+      "timestamp": "2026-02-11T20:33:58.630955",
+      "counts": {
+        "total": 9749,
+        "completed": 6576,
+        "errors": 386
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_492.json"
+    },
+    {
+      "iteration": 493,
+      "timestamp": "2026-02-11T20:34:10.181382",
+      "counts": {
+        "total": 9749,
+        "completed": 6584,
+        "errors": 386
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_493.json"
+    },
+    {
+      "iteration": 494,
+      "timestamp": "2026-02-11T20:34:21.712341",
+      "counts": {
+        "total": 9749,
+        "completed": 6591,
+        "errors": 389
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_494.json"
+    },
+    {
+      "iteration": 495,
+      "timestamp": "2026-02-11T20:34:33.492233",
+      "counts": {
+        "total": 9749,
+        "completed": 6601,
+        "errors": 391
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_495.json"
+    },
+    {
+      "iteration": 496,
+      "timestamp": "2026-02-11T20:34:44.779525",
+      "counts": {
+        "total": 9749,
+        "completed": 6610,
+        "errors": 393
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_496.json"
+    },
+    {
+      "iteration": 497,
+      "timestamp": "2026-02-11T20:34:56.394567",
+      "counts": {
+        "total": 9749,
+        "completed": 6616,
+        "errors": 396
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_497.json"
+    },
+    {
+      "iteration": 498,
+      "timestamp": "2026-02-11T20:35:07.873921",
+      "counts": {
+        "total": 9749,
+        "completed": 6625,
+        "errors": 398
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_498.json"
+    },
+    {
+      "iteration": 499,
+      "timestamp": "2026-02-11T20:35:19.388045",
+      "counts": {
+        "total": 9749,
+        "completed": 6635,
+        "errors": 399
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_499.json"
+    },
+    {
+      "iteration": 500,
+      "timestamp": "2026-02-11T20:35:31.017501",
+      "counts": {
+        "total": 9749,
+        "completed": 6644,
+        "errors": 401
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_500.json"
+    },
+    {
+      "iteration": 501,
+      "timestamp": "2026-02-11T20:35:42.836183",
+      "counts": {
+        "total": 9749,
+        "completed": 6653,
+        "errors": 401
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_501.json"
+    },
+    {
+      "iteration": 502,
+      "timestamp": "2026-02-11T20:35:54.738796",
+      "counts": {
+        "total": 9749,
+        "completed": 6663,
+        "errors": 401
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_502.json"
+    },
+    {
+      "iteration": 503,
+      "timestamp": "2026-02-11T20:36:06.194986",
+      "counts": {
+        "total": 9749,
+        "completed": 6668,
+        "errors": 401
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_503.json"
+    },
+    {
+      "iteration": 504,
+      "timestamp": "2026-02-11T20:36:17.463229",
+      "counts": {
+        "total": 9749,
+        "completed": 6675,
+        "errors": 405
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_504.json"
+    },
+    {
+      "iteration": 505,
+      "timestamp": "2026-02-11T20:36:28.961412",
+      "counts": {
+        "total": 9749,
+        "completed": 6684,
+        "errors": 407
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_505.json"
+    },
+    {
+      "iteration": 506,
+      "timestamp": "2026-02-11T20:36:40.434925",
+      "counts": {
+        "total": 9749,
+        "completed": 6691,
+        "errors": 410
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_506.json"
+    },
+    {
+      "iteration": 507,
+      "timestamp": "2026-02-11T20:36:52.009391",
+      "counts": {
+        "total": 9749,
+        "completed": 6699,
+        "errors": 411
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_507.json"
+    },
+    {
+      "iteration": 508,
+      "timestamp": "2026-02-11T20:37:03.592638",
+      "counts": {
+        "total": 9749,
+        "completed": 6709,
+        "errors": 413
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_508.json"
+    },
+    {
+      "iteration": 509,
+      "timestamp": "2026-02-11T20:37:15.048627",
+      "counts": {
+        "total": 9749,
+        "completed": 6718,
+        "errors": 415
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_509.json"
+    },
+    {
+      "iteration": 510,
+      "timestamp": "2026-02-11T20:37:26.551247",
+      "counts": {
+        "total": 9749,
+        "completed": 6727,
+        "errors": 415
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_510.json"
+    },
+    {
+      "iteration": 511,
+      "timestamp": "2026-02-11T20:37:38.199530",
+      "counts": {
+        "total": 9749,
+        "completed": 6733,
+        "errors": 415
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_511.json"
+    },
+    {
+      "iteration": 512,
+      "timestamp": "2026-02-11T20:37:49.921716",
+      "counts": {
+        "total": 9749,
+        "completed": 6741,
+        "errors": 415
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_512.json"
+    },
+    {
+      "iteration": 513,
+      "timestamp": "2026-02-11T20:38:01.485775",
+      "counts": {
+        "total": 9749,
+        "completed": 6751,
+        "errors": 415
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_513.json"
+    },
+    {
+      "iteration": 514,
+      "timestamp": "2026-02-11T20:38:12.949936",
+      "counts": {
+        "total": 9749,
+        "completed": 6759,
+        "errors": 417
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_514.json"
+    },
+    {
+      "iteration": 515,
+      "timestamp": "2026-02-11T20:38:24.482331",
+      "counts": {
+        "total": 9749,
+        "completed": 6768,
+        "errors": 417
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_515.json"
+    },
+    {
+      "iteration": 516,
+      "timestamp": "2026-02-11T20:38:36.399910",
+      "counts": {
+        "total": 9749,
+        "completed": 6775,
+        "errors": 420
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_516.json"
+    },
+    {
+      "iteration": 517,
+      "timestamp": "2026-02-11T20:38:47.820068",
+      "counts": {
+        "total": 9749,
+        "completed": 6785,
+        "errors": 422
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_517.json"
+    },
+    {
+      "iteration": 518,
+      "timestamp": "2026-02-11T20:38:59.473488",
+      "counts": {
+        "total": 9749,
+        "completed": 6794,
+        "errors": 423
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_518.json"
+    },
+    {
+      "iteration": 519,
+      "timestamp": "2026-02-11T20:39:11.047346",
+      "counts": {
+        "total": 9749,
+        "completed": 6804,
+        "errors": 424
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_519.json"
+    },
+    {
+      "iteration": 520,
+      "timestamp": "2026-02-11T20:39:22.405931",
+      "counts": {
+        "total": 9749,
+        "completed": 6810,
+        "errors": 427
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_520.json"
+    },
+    {
+      "iteration": 521,
+      "timestamp": "2026-02-11T20:39:33.801342",
+      "counts": {
+        "total": 9749,
+        "completed": 6816,
+        "errors": 427
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_521.json"
+    },
+    {
+      "iteration": 522,
+      "timestamp": "2026-02-11T20:39:45.314476",
+      "counts": {
+        "total": 9749,
+        "completed": 6825,
+        "errors": 427
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_522.json"
+    },
+    {
+      "iteration": 523,
+      "timestamp": "2026-02-11T20:39:56.919291",
+      "counts": {
+        "total": 9749,
+        "completed": 6833,
+        "errors": 428
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_523.json"
+    },
+    {
+      "iteration": 524,
+      "timestamp": "2026-02-11T20:40:08.191230",
+      "counts": {
+        "total": 9749,
+        "completed": 6839,
+        "errors": 432
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_524.json"
+    },
+    {
+      "iteration": 525,
+      "timestamp": "2026-02-11T20:40:19.739984",
+      "counts": {
+        "total": 9749,
+        "completed": 6848,
+        "errors": 433
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_525.json"
+    },
+    {
+      "iteration": 526,
+      "timestamp": "2026-02-11T20:40:31.135798",
+      "counts": {
+        "total": 9749,
+        "completed": 6855,
+        "errors": 435
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_526.json"
+    },
+    {
+      "iteration": 527,
+      "timestamp": "2026-02-11T20:40:42.910235",
+      "counts": {
+        "total": 9749,
+        "completed": 6865,
+        "errors": 436
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_527.json"
+    },
+    {
+      "iteration": 528,
+      "timestamp": "2026-02-11T20:40:54.195267",
+      "counts": {
+        "total": 9749,
+        "completed": 6873,
+        "errors": 438
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_528.json"
+    },
+    {
+      "iteration": 529,
+      "timestamp": "2026-02-11T20:41:05.549561",
+      "counts": {
+        "total": 9749,
+        "completed": 6879,
+        "errors": 442
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_529.json"
+    },
+    {
+      "iteration": 530,
+      "timestamp": "2026-02-11T20:41:17.005772",
+      "counts": {
+        "total": 9749,
+        "completed": 6890,
+        "errors": 442
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_530.json"
+    },
+    {
+      "iteration": 531,
+      "timestamp": "2026-02-11T20:41:28.429583",
+      "counts": {
+        "total": 9749,
+        "completed": 6898,
+        "errors": 442
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_531.json"
+    },
+    {
+      "iteration": 532,
+      "timestamp": "2026-02-11T20:41:40.038809",
+      "counts": {
+        "total": 9749,
+        "completed": 6909,
+        "errors": 442
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_532.json"
+    },
+    {
+      "iteration": 533,
+      "timestamp": "2026-02-11T20:41:51.357456",
+      "counts": {
+        "total": 9749,
+        "completed": 6917,
+        "errors": 442
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_533.json"
+    },
+    {
+      "iteration": 534,
+      "timestamp": "2026-02-11T20:42:02.913774",
+      "counts": {
+        "total": 9749,
+        "completed": 6926,
+        "errors": 444
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_534.json"
+    },
+    {
+      "iteration": 535,
+      "timestamp": "2026-02-11T20:42:14.673479",
+      "counts": {
+        "total": 9749,
+        "completed": 6934,
+        "errors": 444
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_535.json"
+    },
+    {
+      "iteration": 536,
+      "timestamp": "2026-02-11T20:42:26.479991",
+      "counts": {
+        "total": 9749,
+        "completed": 6944,
+        "errors": 447
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_536.json"
+    },
+    {
+      "iteration": 537,
+      "timestamp": "2026-02-11T20:42:38.145249",
+      "counts": {
+        "total": 9749,
+        "completed": 6952,
+        "errors": 450
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_537.json"
+    },
+    {
+      "iteration": 538,
+      "timestamp": "2026-02-11T20:42:49.805836",
+      "counts": {
+        "total": 9749,
+        "completed": 6961,
+        "errors": 451
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_538.json"
+    },
+    {
+      "iteration": 539,
+      "timestamp": "2026-02-11T20:43:01.723716",
+      "counts": {
+        "total": 9749,
+        "completed": 6972,
+        "errors": 452
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_539.json"
+    },
+    {
+      "iteration": 540,
+      "timestamp": "2026-02-11T20:43:13.506039",
+      "counts": {
+        "total": 9749,
+        "completed": 6979,
+        "errors": 453
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_540.json"
+    },
+    {
+      "iteration": 541,
+      "timestamp": "2026-02-11T20:43:25.109018",
+      "counts": {
+        "total": 9749,
+        "completed": 6988,
+        "errors": 453
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_541.json"
+    },
+    {
+      "iteration": 542,
+      "timestamp": "2026-02-11T20:43:37.033561",
+      "counts": {
+        "total": 9749,
+        "completed": 6995,
+        "errors": 455
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_542.json"
+    },
+    {
+      "iteration": 543,
+      "timestamp": "2026-02-11T20:43:48.839185",
+      "counts": {
+        "total": 9749,
+        "completed": 7004,
+        "errors": 456
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_543.json"
+    },
+    {
+      "iteration": 544,
+      "timestamp": "2026-02-11T20:44:00.305030",
+      "counts": {
+        "total": 9749,
+        "completed": 7014,
+        "errors": 457
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_544.json"
+    },
+    {
+      "iteration": 545,
+      "timestamp": "2026-02-11T20:44:11.843047",
+      "counts": {
+        "total": 9749,
+        "completed": 7021,
+        "errors": 460
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_545.json"
+    },
+    {
+      "iteration": 546,
+      "timestamp": "2026-02-11T20:44:23.337542",
+      "counts": {
+        "total": 9749,
+        "completed": 7029,
+        "errors": 462
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_546.json"
+    },
+    {
+      "iteration": 547,
+      "timestamp": "2026-02-11T20:44:35.789550",
+      "counts": {
+        "total": 9749,
+        "completed": 7038,
+        "errors": 465
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_547.json"
+    }
+  ],
+  "progress": {
+    "total_prospects": 9749,
+    "enriched_count": 7848,
+    "api_calls": 29625,
+    "errors": 2025,
+    "workers": 4,
+    "timestamp": "2026-02-11T20:44:36.997751",
+    "final": false
+  },
+  "http": {
+    "calls": [],
+    "responses": [],
+    "endpoint_counts": []
+  },
+  "reconciliation": {
+    "db_total": 9749,
+    "progress_total": 9749,
+    "snapshots_latest": {
+      "iteration": 547,
+      "timestamp": "2026-02-11T20:44:35.789550",
+      "counts": {
+        "total": 9749,
+        "completed": 7038,
+        "errors": 465
+      },
+      "return_code": 0,
+      "_path": "outputs\\recursive_snapshot_547.json"
+    }
+  }
+}

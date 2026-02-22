@@ -1,0 +1,12 @@
+{
+  "name": "OSHA RID Lookup",
+  "type": "csv",
+  "source_csv": "../../outputs/oshadata/OSHADataDoor_OshaScrapy/RIDlookup.csv",
+  "note": "Lookup mapping from RID (report id) to US state name. Useful to resolve report_id -> state when joining accidents.",
+  "columns": [
+    {"name": "RID", "type": "string", "description": "report identifier (keep as string to preserve formatting)"},
+    {"name": "state", "type": "string"}
+  ],
+  "example_rows": 10,
+  "api_slug": "oshadata.ridlookup"
+}

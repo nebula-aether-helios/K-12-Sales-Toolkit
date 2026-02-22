@@ -1,0 +1,10 @@
+{
+  "total_compared": 500,
+  "top1_match_count": 0,
+  "top1_match_pct": 0.0,
+  "topk_mean_jaccard": 0.0,
+  "topk_median_jaccard": 0.0,
+  "topk_mean_intersection": 0.0,
+  "any_overlap_count": 0,
+  "any_overlap_pct": 0.0
+}

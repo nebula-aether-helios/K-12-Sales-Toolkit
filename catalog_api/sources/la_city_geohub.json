@@ -1,0 +1,12 @@
+{
+  "name": "City of Los Angeles GeoHub",
+  "type": "arcgis",
+  "source_csv": "../City of Los Angeles Geohub.csv",
+  "note": "Each row contains an ArcGIS service URL or FeatureServer link; use arcgis_fetcher to retrieve metadata and previews.",
+  "example_ids": [
+    "57f5fc977d6a427a978003a6229ab5e7",
+    "e5a8049c0c654132b683202a995b2102"
+  ]
+
+  ,"api_slug": "arcgis.la_city"
+}
