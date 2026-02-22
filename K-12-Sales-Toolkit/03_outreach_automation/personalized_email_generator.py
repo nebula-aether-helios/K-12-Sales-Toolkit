@@ -93,21 +93,46 @@ class K8EmailGenerator:
         """
         variants = {}
 
-        for v in ["subject_first", "problem_focused", "peer_story"]:
-            # TODO (Jules): Uncomment when OPENAI_API_KEY is available
-            # from openai import OpenAI
-            # client = OpenAI(api_key=self.openai_key)
-            # prompt = self._build_prompt(prospect, v)
-            # response = client.chat.completions.create(
-            #     model="gpt-4-turbo-preview",
-            #     messages=[{"role": "user", "content": prompt}],
-            #     max_tokens=300,
-            #     temperature=0.7,
-            # )
-            # variants[v] = response.choices[0].message.content
+        # Try OpenAI
+        if self.openai_key:
+            try:
+                from openai import OpenAI
+                client = OpenAI(api_key=self.openai_key)
+                print(f"Generating emails for {prospect.get('name')} using OpenAI...")
+                for v in ["subject_first", "problem_focused", "peer_story"]:
+                    prompt = self._build_prompt(prospect, v)
+                    response = client.chat.completions.create(
+                        model="gpt-4-turbo-preview",
+                        messages=[{"role": "user", "content": prompt}],
+                        max_tokens=300,
+                        temperature=0.7,
+                    )
+                    variants[v] = response.choices[0].message.content
+            except Exception as e:
+                print(f"OpenAI generation failed: {e}. Trying Gemini...")
 
-            # Placeholder templates — replace with GPT call above
-            variants[v] = self._get_template(prospect, v)
+        # Try Gemini if OpenAI failed or not present
+        if not variants:
+            # Check for GOOGLE_API_KEY
+            google_key = os.getenv("GOOGLE_API_KEY")
+            if google_key:
+                try:
+                    import google.generativeai as genai
+                    genai.configure(api_key=google_key)
+                    model = genai.GenerativeModel('gemini-pro')
+                    print(f"Generating emails for {prospect.get('name')} using Gemini...")
+                    for v in ["subject_first", "problem_focused", "peer_story"]:
+                        prompt = self._build_prompt(prospect, v)
+                        response = model.generate_content(prompt)
+                        variants[v] = response.text
+                except Exception as e:
+                    print(f"Gemini generation failed: {e}. Using templates.")
+
+        # Fallback to templates if no AI worked
+        if not variants:
+            print("Using template fallback.")
+            for v in ["subject_first", "problem_focused", "peer_story"]:
+                variants[v] = self._get_template(prospect, v)
 
         result = {
             "prospect_name": prospect.get("name"),

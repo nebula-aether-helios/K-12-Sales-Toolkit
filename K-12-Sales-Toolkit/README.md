@@ -143,6 +143,9 @@ pip install -r requirements.txt
 cp .env.example .env
 # Add your API keys (OpenAI, SerpAPI, etc.)
 
+# Fetch live data
+python data/run_data_collection.py
+
 # Launch the Streamlit demo
 cd 07_streamlit_demo
 streamlit run app.py
