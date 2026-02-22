@@ -1,9 +1,0 @@
-{
-  "name": "OSHA DataDoor GitHub",
-  "type": "github",
-  "repo": "https://github.com/OSHADataDoor",
-  "note": "Use GitHub API to list repos and raw content files; treat CSV/JSON files in the repo as dataset sources.",
-  "example_repos": ["OSHA-Data-Catalog", "fatality-data"]
-
-  ,"api_slug": "github.oshadata"
-}

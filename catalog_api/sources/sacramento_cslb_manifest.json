@@ -1,9 +1,0 @@
-{
-  "name": "Sacramento CSLB Contractors",
-  "type": "csv",
-  "source_csv": "../sacramento_contractors_cslb_sac.csv",
-  "note": "This is a license registry CSV (CSLB) — treat as a CSV seed source; enrich via API lookups (OSHA, Socrata, CKAN) as needed.",
-  "example_rows": 100
-
-  ,"api_slug": "csv.sacramento_cslb"
-}
