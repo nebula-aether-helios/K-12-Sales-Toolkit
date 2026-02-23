@@ -53,3 +53,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+from data_fetchers import fetch_cde_admin_directory
+print('Step 5/5: Fetching CDE Admin Directory...')
+fetch_cde_admin_directory()

@@ -153,3 +153,35 @@ def fetch_esser_grants(state="CA", year=2024, output_dir="data/processed"):
 if __name__ == "__main__":
     fetch_caaspp_data()
     fetch_esser_grants()
+
+def fetch_cde_admin_directory():
+    """
+    Fetches the California Department of Education (CDE) Public School Directory.
+
+    This function retrieves contact information for school administrators.
+    Currently mocked to return a sample DataFrame as the CDE directory is a large
+    file download (dbf/xls) that requires specialized parsing.
+
+    Returns:
+        pd.DataFrame: DataFrame containing district, school, administrator, and email columns.
+    """
+    print("Fetching CDE Admin Directory (Mock)...")
+
+    # Mock data structure
+    data = {
+        "CDSCode": ["19647330000000", "30665220000000"],
+        "District": ["Los Angeles Unified", "Garden Grove Unified"],
+        "School": ["District Office", "District Office"],
+        "Administrator": ["Alberto Carvalho", "Dr. Gabriela Mafi"],
+        "JobTitle": ["Superintendent", "Superintendent"],
+        "Email": ["superintendent@lausd.net", "superintendent@ggusd.us"],
+        "Phone": ["(213) 241-1000", "(714) 663-6000"]
+    }
+
+    df = pd.DataFrame(data)
+
+    # Save to processed
+    output_path = os.path.join("data/processed", "cde_admin_directory.csv")
+    df.to_csv(output_path, index=False)
+    print(f"Saved CDE Admin Directory to {output_path}")
+    return df
