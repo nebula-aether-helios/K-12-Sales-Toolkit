@@ -20,7 +20,7 @@
 | 📓 Interactive Notebooks | [AetherBlog Portfolio →](https://runforme.app/aetherblog/) |
 | 🎯 LA Unified Analysis | [View Live Notebook →](https://runforme.app/aetherblog/) |
 | 🖥️ Streamlit Dashboard | [Try District Intelligence Tool →](#) |
-| 🎥 60-Second Walkthrough | [Watch Loom Video →](#) |
+| 🎥 60-Second Walkthrough | [Watch Loom Video (Pending) →](#) |
 
 ---
 
@@ -105,7 +105,7 @@ A complete data-driven analysis of LA Unified — the largest district in Califo
 identifying a **$2.5M+ opportunity** for Literacy Partners. Built with public CAASPP data,
 district budget reports, and decision-maker intelligence.
 
-→ [View on AetherBlog](#) | [Open in Colab](#)
+→ [View on AetherBlog](#) | [Open in Colab (Pending)](#)
 
 ---
 
@@ -115,7 +115,7 @@ district budget reports, and decision-maker intelligence.
 Data-backed analysis of why 68% of district PD pilots fail (teacher resistance),
 with a Pilot Readiness Scorecard that helps reps qualify better and close faster.
 
-→ [View on AetherBlog](#) | [Open in Colab](#)
+→ [View on AetherBlog](#) | [Open in Colab (Pending)](#)
 
 ---
 
@@ -125,7 +125,7 @@ with a Pilot Readiness Scorecard that helps reps qualify better and close faster
 Honest, data-driven narrative of my transition from K-8 teacher → top-10% SDR,
 with the actual tools I built and the metrics they produced.
 
-→ [View on AetherBlog](#) | [Open in Colab](#)
+→ [View on AetherBlog](#) | [Open in Colab (Pending)](#)
 
 ---
 
@@ -190,12 +190,11 @@ LINKEDIN_PASSWORD=your_password_here
 | Layer | Tools |
 |-------|-------|
 | **Data** | pandas, numpy, requests, BeautifulSoup |
-| **ML** | scikit-learn, XGBoost |
+| **ML** | scikit-learn, RandomForest |
 | **Visualization** | matplotlib, seaborn, plotly |
-| **NLP / AI** | openai, langchain, transformers |
-| **Web App** | streamlit, gradio |
-| **Automation** | selenium, playwright |
-| **CRM** | hubspot-api-client |
+| **NLP / AI** | openai, google-generativeai |
+| **Web App** | streamlit |
+| **CLV Modeling** | lifetimes (BG/NBD + Gamma-Gamma) |
 
 ---
 
@@ -207,9 +206,11 @@ and every teacher deserves the tools to deliver it.
 
 I'd love to show you how this toolkit would accelerate your pipeline.
 
-📧 **[your.email@gmail.com]**  
-💼 **[LinkedIn Profile URL]**  
-🌐 **[AetherBlog Portfolio URL]**
+👤 **Ishmael Muhammad**
+📞 **240-739-8914**
+📧 **i.mm0904@gmail.com**
+💼 **[LinkedIn Profile](https://www.linkedin.com/in/ishmael-muhammad-93806925a/)**
+🌐 **[AetherBlog Portfolio](https://runforme.app/aetherblog/)**
 
 ---
 
